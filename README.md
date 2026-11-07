@@ -1,6 +1,6 @@
 # Calibrated Quantum Readout
 
-How much quantum Fisher information can one measurement preserve simultaneously in every local direction of a mixed state? For a state of exact rank $`r<d`$, an eigenbasis-calibrated measurement can retain the fraction $`1/(2r)`$ in every direction of the full fixed-rank model. No single-copy measurement can guarantee a larger fraction.
+How much quantum Fisher information can one measurement preserve simultaneously in every local direction of a mixed state? For a state of exact rank $`r\lt d`$, an eigenbasis-calibrated measurement can retain the fraction $`1/(2r)`$ in every direction of the full fixed-rank model. No single-copy measurement can guarantee a larger fraction.
 
 The result depends on the occupied rank, even when the positive eigenvalues are very unequal and the empty subspace is large. Calibration supplies the nominal eigenbasis. It changes the permitted measurement design and has a statistical cost of its own.
 
@@ -22,7 +22,7 @@ The [explicit measurement](science/construction.md) has **$`2rd-r`$ positive-pro
 I_M(X)
 =\frac{J_\rho(X)}{2r}
 +\frac1{2r}\sum_{j=1}^{r}\frac{X_{jj}^2}{\lambda_j}
-+\frac1r\sum_{j<\ell\le r}
++\frac1r\sum_{j\lt \ell\le r}
 \frac{(X_{jj}+X_{\ell\ell})^2}{\lambda_j+\lambda_\ell}
 ```
 

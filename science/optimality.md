@@ -19,10 +19,10 @@ Fix
 ```math
 \rho=\sum_{j=1}^{r}\lambda_j|e_j\rangle\langle e_j|,
 \qquad
-\lambda_j>0,\qquad \sum_j\lambda_j=1,
+\lambda_j\gt 0,\qquad \sum_j\lambda_j=1,
 ```
 
-and write $`P`$ for its support projector, $`Q=\mathbb I-P`$, and $`k=d-r>0`$. The full real tangent space is
+and write $`P`$ for its support projector, $`Q=\mathbb I-P`$, and $`k=d-r\gt 0`$. The full real tangent space is
 
 ```math
 \mathcal T_\rho
@@ -98,12 +98,12 @@ The score and its Fisher form are therefore defined by
 ```math
 \ell_X(\omega)=
 \begin{cases}
-q_X(\omega)/p(\omega),&p(\omega)>0,\\
+q_X(\omega)/p(\omega),&p(\omega)\gt 0,\\
 0,&p(\omega)=0,
 \end{cases}
 \qquad
 I_M(X,Y)
-=\int_{\{p>0\}}\frac{q_Xq_Y}{p}\,d\mu.
+=\int_{\{p\gt 0\}}\frac{q_Xq_Y}{p}\,d\mu.
 ```
 
 This is the ordinary score convention: zero-probability outcomes contribute zero at the calibration point. When the classical model is differentiable in quadratic mean, it is its usual regular Fisher form. Direction-dependent limits at zero-probability outcomes are not substituted into this definition. The attaining measurement avoids the issue because every outcome probability is positive; the operational regularity discussion is in [estimation](estimation.md).
@@ -204,7 +204,7 @@ Consequently,
 ```math
 \mathrm{tr}\!\left(J_{\mathcal C}^{-1}I_{\mathcal C}\right)
 =
-\int_{\{p>0\}}
+\int_{\{p\gt 0\}}
 \frac{\displaystyle\sum_{j=1}^{r}\sum_{a=1}^{k}
 \lambda_j|E_{ja}|^2}
 {p}\,d\mu.
@@ -225,13 +225,13 @@ For each kernel index $`a`$, this gives
 =p\,E_{aa}^{K}.
 ```
 
-Summing over $`a`$, integrating over $`\{p>0\}`$, and using completeness establishes the refined bound:
+Summing over $`a`$, integrating over $`\{p\gt 0\}`$, and using completeness establishes the refined bound:
 
 ```math
 \begin{aligned}
 \mathrm{tr}\!\left(J_{\mathcal C}^{-1}I_{\mathcal C}\right)
 &\le
-\int_{\{p>0\}}\mathrm{tr}(QE)\,d\mu\\
+\int_{\{p\gt 0\}}\mathrm{tr}(QE)\,d\mu\\
 &\le
 \int_\Omega\mathrm{tr}(QE)\,d\mu\\
 &=\mathrm{tr}\,Q=k=d-r.
@@ -275,7 +275,7 @@ Taking the trace and applying the support-rotation bound yields
 \le k.
 ```
 
-Since $`k>0`$,
+Since $`k\gt 0`$,
 
 ```math
 c\le\frac1{2r}.

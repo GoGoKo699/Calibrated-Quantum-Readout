@@ -4,7 +4,7 @@ This account compares the calibrated local measurement problem with the primary 
 
 ## The exact problem being compared
 
-Fix a nominal density operator $`\rho`$ of rank $`1\le r<d`$. The statistical tangent is the entire smooth manifold of exactly rank-$`r`$, trace-one states, including changes in eigenvalues, rotations within the support, and rotations from the support into the kernel. A single-copy POVM may depend on the nominal eigenbasis and rank. It is held fixed when derivatives are taken. Let $`J_\rho`$ be the symmetric logarithmic derivative (SLD) Fisher metric and $`I_M`$ the ordinary score Fisher information of the POVM.
+Fix a nominal density operator $`\rho`$ of rank $`1\le r\lt d`$. The statistical tangent is the entire smooth manifold of exactly rank-$`r`$, trace-one states, including changes in eigenvalues, rotations within the support, and rotations from the support into the kernel. A single-copy POVM may depend on the nominal eigenbasis and rank. It is held fixed when derivatives are taken. Let $`J_\rho`$ be the symmetric logarithmic derivative (SLD) Fisher metric and $`I_M`$ the ordinary score Fisher information of the POVM.
 
 The quantity studied here is
 
@@ -16,7 +16,7 @@ c_*(\rho)
 
 The result is $`c_*(\rho)=1/(2r)`$, for every positive occupied spectrum. The construction has $`r(2d-1)`$ outcomes and strictly positive nominal probabilities. Its weights do not require the values of the nonzero eigenvalues. The exact optimum is for the full tangent model; a restricted submodel can have a larger optimum while inheriting the same lower guarantee.
 
-The support-rotation upper bound and the pure-state and support-pair measurement ingredients are known. The construction combines these ingredients to attain the bound while controlling the entire mixed-state rank-$`r`$ tangent. The contribution concerns $`2\le r<d`$; the pure-state endpoint is established prior work.
+The support-rotation upper bound and the pure-state and support-pair measurement ingredients are known. The construction combines these ingredients to attain the bound while controlling the entire mixed-state rank-$`r`$ tangent. The contribution concerns $`2\le r\lt d`$; the pure-state endpoint is established prior work.
 
 ## Closest primary comparisons
 

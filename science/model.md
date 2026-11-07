@@ -46,8 +46,8 @@ In the chosen eigenbasis,
 ```math
 J_\rho(X,X)
 =\sum_{j\le r}\frac{X_{jj}^2}{\lambda_j}
-+4\sum_{i<j\le r}\frac{|X_{ij}|^2}{\lambda_i+\lambda_j}
-+4\sum_{j\le r,\,a>r}\frac{|X_{ja}|^2}{\lambda_j}.
++4\sum_{i\lt j\le r}\frac{|X_{ij}|^2}{\lambda_i+\lambda_j}
++4\sum_{j\le r,\,a\gt r}\frac{|X_{ja}|^2}{\lambda_j}.
 ```
 
 This form is positive definite on the full real tangent. The term *quantum Fisher information* below always means this ordinary pointwise SLD metric.
@@ -56,7 +56,7 @@ For a discrete POVM $`M=\{E_x\}`$, its classical score Fisher information is
 
 ```math
 p_x=\mathrm{Tr}(\rho E_x),\qquad
-I_M(\rho;X,Y)=\sum_{x:p_x>0}
+I_M(\rho;X,Y)=\sum_{x:p_x\gt 0}
 \frac{\mathrm{Tr}(E_xX)\mathrm{Tr}(E_xY)}{p_x}.
 ```
 

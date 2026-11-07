@@ -131,7 +131,7 @@ The positive constants in these assumptions are local analysis constants, not pr
 
 ### A regular pilot measurement
 
-One can choose the pilot POVM with positive definite effects. Starting from any finite informationally complete POVM $`\{H_a\}`$ with nonzero effects, set, for a fixed $`0<\eta<1`$,
+One can choose the pilot POVM with positive definite effects. Starting from any finite informationally complete POVM $`\{H_a\}`$ with nonzero effects, set, for a fixed $`0\lt \eta\lt 1`$,
 
 ```math
 \widetilde H_a
@@ -149,7 +149,7 @@ Choose
 
 ```math
 n_0=\lceil n^\alpha\rceil,
-\qquad \frac12<\alpha<1,
+\qquad \frac12\lt \alpha\lt 1,
 \qquad n_1=n-n_0.
 ```
 
@@ -231,7 +231,7 @@ Also $`n/n_1\to1`$ and $`J(\widetilde\theta)\to J_0`$. A bounded extension on th
 }
 ```
 
-If the pilot moment and localization bounds hold uniformly on a fixed smaller neighborhood of $`\theta_0`$, the same argument gives, for each fixed $`H<\infty`$,
+If the pilot moment and localization bounds hold uniformly on a fixed smaller neighborhood of $`\theta_0`$, the same argument gives, for each fixed $`H\lt \infty`$,
 
 ```math
 \begin{aligned}

@@ -27,7 +27,7 @@ Run these commands from the repository root. The second check invocation additio
 | General-measurement converse | Random rank-one frames, their coarse-grainings, and eigenbasis projective measurements at three dimension/rank pairs. Include exact zero-probability kernel outcomes under the ordinary-score convention. |
 | Basis invariance | Apply a common deterministic random unitary to the state, tangents, and effects at three dimension/rank pairs, then compare the resulting FI with the original matrix. |
 
-The construction pairs are $`(d,r)=(3,1),(3,2),(4,2),(7,3),(7,6),(6,6),(16,3)`$. The $`(6,6)`$ cases are **full-rank construction controls**: the displayed POVM still exists there, but the rank-deficient optimality theorem does not apply. For $`r>1`$, the occupied eigenvalues are proportional to a geometric progression with largest-to-smallest ratio $`10^q`$, where $`q\in\{0,4,8\}`$. The pure-state case has only one occupied eigenvalue.
+The construction pairs are $`(d,r)=(3,1),(3,2),(4,2),(7,3),(7,6),(6,6),(16,3)`$. The $`(6,6)`$ cases are **full-rank construction controls**: the displayed POVM still exists there, but the rank-deficient optimality theorem does not apply. For $`r\gt 1`$, the occupied eigenvalues are proportional to a geometric progression with largest-to-smallest ratio $`10^q`$, where $`q\in\{0,4,8\}`$. The pure-state case has only one occupied eigenvalue.
 
 ## Recorded result
 

@@ -34,7 +34,7 @@ At the nominal state
 
 ```math
 \rho=\sum_{j=1}^{r}\lambda_j|e_j\rangle\langle e_j|,
-\qquad \lambda_j>0,
+\qquad \lambda_j\gt 0,
 ```
 
 the measurement requires the vectors $`e_j`$ to be an eigenbasis of the occupied block, rather than merely an arbitrary basis of its support. Any basis within a degenerate positive eigenspace is valid. The kernel basis is arbitrary, provided it is orthonormal and orthogonal to the support.
@@ -47,15 +47,15 @@ For pilot calibration, the total number of state preparations is
 n=n_0+n_1.
 ```
 
-The displayed pointwise asymptotic protocol takes $`n_0=\lceil n^\alpha\rceil`$ with $`1/2<\alpha<1`$. It uses every pilot attempt and every second-stage outcome in its resource accounting. The statement $`n_0/n\to0`$ concerns a fixed dimension, fixed local model, and fixed state with a positive smallest occupied eigenvalue. It does not assign a uniform finite-sample cost to estimating the rank or the eigenbasis over a family approaching a rank boundary.
+The displayed pointwise asymptotic protocol takes $`n_0=\lceil n^\alpha\rceil`$ with $`1/2\lt \alpha\lt 1`$. It uses every pilot attempt and every second-stage outcome in its resource accounting. The statement $`n_0/n\to0`$ concerns a fixed dimension, fixed local model, and fixed state with a positive smallest occupied eigenvalue. It does not assign a uniform finite-sample cost to estimating the rank or the eigenbasis over a family approaching a rank boundary.
 
 ## Calibration sensitivity for a weakly occupied direction
 
-The effect of a small basis error can be quantified on an actual rank-preserving parameter direction. Assume $`r\ge2`$ and $`d>r`$. Let $`e_1`$ and $`e_2`$ be occupied eigenvectors with eigenvalues
+The effect of a small basis error can be quantified on an actual rank-preserving parameter direction. Assume $`r\ge2`$ and $`d\gt r`$. Let $`e_1`$ and $`e_2`$ be occupied eigenvectors with eigenvalues
 
 ```math
-\Lambda=\lambda_1>0,
-\qquad \varepsilon=\lambda_2>0,
+\Lambda=\lambda_1\gt 0,
+\qquad \varepsilon=\lambda_2\gt 0,
 ```
 
 and let $`f_1`$ be a kernel vector. The other occupied eigenvectors and eigenvalues are arbitrary. Consider the rank-preserving model in which only the weakly occupied vector rotates:

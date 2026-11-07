@@ -13,7 +13,7 @@ Let $`\mathcal H`$ have finite dimension $`d`$, and fix a state
 \qquad
 2\le r\lt d,
 \qquad
-\lambda_j>0,
+\lambda_j\gt 0,
 \qquad
 \sum_{j=1}^{r}\lambda_j=1.
 ```
@@ -120,7 +120,7 @@ The root-of-unity identity
 =
 \begin{cases}
 1,& n\equiv0\pmod N,\\
-0,& n\not\equiv0\pmod N
+0,& \text{otherwise}
 \end{cases}
 ```
 
@@ -169,10 +169,10 @@ At the calibration state,
 
 ```math
 \mathrm{tr}(\rho F_{jt})
-=\frac{\lambda_j}{rN}>0,
+=\frac{\lambda_j}{rN}\gt 0,
 \qquad
 \mathrm{tr}(\rho G_{j\ell,\zeta})
-=\frac{\lambda_j+\lambda_\ell}{4r}>0.
+=\frac{\lambda_j+\lambda_\ell}{4r}\gt 0.
 ```
 
 There are finitely many outcomes and all have positive probability. Thus, for any smooth local rank-$`r`$ model, its classical outcome model has ordinary smooth scores in a neighborhood of the calibration point. The construction introduces no zero-probability residual outcome.

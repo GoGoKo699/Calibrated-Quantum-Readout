@@ -9,7 +9,7 @@ Consider a three-level source with orthonormal states $`|e_1\rangle,|e_2\rangle,
 
 The first two levels are occupied; the third is empty. A new specimen can differ slightly from this calibration. Its populations can change, coherences can appear, and its occupied subspace can rotate toward the third level. The readout must respond to all these possibilities using one fixed measurement on each specimen.
 
-This project constructs such a measurement and determines its best possible worst-direction sensitivity. For a state of rank $`r<d`$, the optimal retained fraction of SLD quantum Fisher information is exactly $`1/(2r)`$. The qutrit above has $`r=2`$, so its sharp fraction is $`1/4`$. The statement concerns the complete smooth rank-two model, including motion of the occupied subspace. [The model](../science/model.md) fixes these quantifiers.
+This project constructs such a measurement and determines its best possible worst-direction sensitivity. For a state of rank $`r\lt d`$, the optimal retained fraction of SLD quantum Fisher information is exactly $`1/(2r)`$. The qutrit above has $`r=2`$, so its sharp fraction is $`1/4`$. The statement concerns the complete smooth rank-two model, including motion of the occupied subspace. [The model](../science/model.md) fixes these quantifiers.
 
 The [thirty-milestone map](MILESTONES.md) organizes the background and the construction into 12 preliminary and 18 narrative milestones. The sole educational anchor, [DDG20 v2](ANCHOR.md), supplies the estimation framework. This bridge develops the qutrit experiment first, then connects it to the general theorem and its statistical meaning.
 
@@ -107,7 +107,7 @@ The matching obstruction comes from support motion. There are $`2r(d-r)`$ real s
 
 The converse is inherited from [ZC26](../references/RELATED_WORK.md#zc26). The project assembles the known pure-state Fisher-symmetric ingredient [Li16](../references/RELATED_WORK.md#li16) and support-pair ingredient [Pereira20](../references/RELATED_WORK.md#pereira20) into a finite measurement attaining this bound on the entire mixed-state tangent. The [optimality proof](../science/optimality.md) also covers continuous outcome spaces and states its ordinary-score convention at zero-probability outcomes.
 
-The tangent model is essential. If the qutrit's occupied two-dimensional support is known to remain fixed, the four support-motion coordinates disappear. At the maximally mixed qubit state the optimal fraction is then $`1/3`$. Allowing unknown motion into an empty level changes the problem. The proof of $`1/(2r)`$ requires $`r<d`$ and makes no corresponding formula claim for general full-rank states. These distinctions complete [M21–M24](MILESTONES.md#m21).
+The tangent model is essential. If the qutrit's occupied two-dimensional support is known to remain fixed, the four support-motion coordinates disappear. At the maximally mixed qubit state the optimal fraction is then $`1/3`$. Allowing unknown motion into an empty level changes the problem. The proof of $`1/(2r)`$ requires $`r\lt d`$ and makes no corresponding formula claim for general full-rank states. These distinctions complete [M21–M24](MILESTONES.md#m21).
 
 ## From information to estimation
 
@@ -135,7 +135,7 @@ The comparison with collective measurements uses local asymptotic minimax risk o
 
 ## What calibration costs
 
-If the operating point is unknown, a pilot sample can estimate it before the remaining specimens are measured. The project's [pilot argument](../science/estimation.md#learning-the-calibration-with-a-pilot-sample) uses $`n_0=\lceil n^\alpha\rceil`$ copies with $`1/2<\alpha<1`$. Under its smoothness, identifiability, localization, and moment conditions, the pilot fraction vanishes while its error is small enough for a subsequent score correction.
+If the operating point is unknown, a pilot sample can estimate it before the remaining specimens are measured. The project's [pilot argument](../science/estimation.md#learning-the-calibration-with-a-pilot-sample) uses $`n_0=\lceil n^\alpha\rceil`$ copies with $`1/2\lt \alpha\lt 1`$. Under its smoothness, identifiability, localization, and moment conditions, the pilot fraction vanishes while its error is small enough for a subsequent score correction.
 
 The dimension, rank, and true state are fixed in this argument. The occupied eigenvalues have a positive lower bound on the chosen local region. No gap between occupied eigenvalues is required: after each pilot result, any eigenbasis within a degenerate occupied block can be selected and held fixed. The argument never differentiates that basis or assumes it converges. DDG20's general full-rank asymptotic theory does not supply this rank-deficient result; the [anchor scope note](ANCHOR.md#scope-of-the-bridge) records the boundary.
 
