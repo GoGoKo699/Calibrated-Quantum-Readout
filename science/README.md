@@ -2,7 +2,7 @@
 
 Quantum Fisher information describes the local sensitivity available in a quantum state. A measurement converts that state into ordinary outcome probabilities. When several parameters matter at once, one measurement can lose information in some directions even if another measurement would be optimal for each direction separately. This project asks for the largest common fraction that can be preserved throughout the full local model of a rank-deficient mixed state.
 
-The [model](model.md) makes that question precise as an SLD-normalized minimum-eigenvalue design problem. At a fixed nominal rank-$`r`$ state in dimension $`d>r`$, the exact optimum is $`1/(2r)`$. The result includes arbitrary positive occupied spectra and all motions of the occupied subspace into the kernel.
+The [model](model.md) makes that question precise as an SLD-normalized minimum-eigenvalue design problem. At a fixed nominal rank-$`r`$ state in dimension $`d\gt r`$, the exact optimum is $`1/(2r)`$. The result includes arbitrary positive occupied spectra and all motions of the occupied subspace into the kernel.
 
 ## Why rank enters
 

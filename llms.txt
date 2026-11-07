@@ -15,6 +15,14 @@
 - [Bibliography](references/references.bib): machine-readable references.
 - [Verification](verification/README.md): runnable checks, environments, recorded outputs, and figure generation.
 
+## Learning sources
+
+- [Source-to-project bridge](learning/README.md): the one-copy experiment, rank-two qutrit, construction, converse, estimation, and calibration story in milestone order.
+- [Selected anchor](learning/ANCHOR.md): Demkowicz-Dobrzański, Górecki & Guţă, arXiv:2001.11742v2; selective sections, notation translation, and the full-rank asymptotic-normality boundary.
+- [Milestone map](learning/MILESTONES.md): exactly M01–M30, with 12 background and 18 narrative targets, dependencies, and source pointers.
+
+For a first encounter, read the bridge and map. For a proof, use the scientific sources directly. For a numerical or figure reproduction, use verification/README.md. The anchor supplies foundations; the project's canonical pages supply its rank-stratum geometry, finite readout, sharp mixed-rank attainment, and explicit calibration/risk qualifications.
+
 ## Interpretation boundaries
 
 Keep the measurement frozen when differentiating. The design requires an occupied eigenbasis and rank, but no occupied eigenvalue values. Estimation additionally uses likelihood probabilities and model derivatives. Equality of the design optimum applies to the full fixed-rank tangent; restricted submodels inherit a lower guarantee and can have better optima. The exact Fisher fraction does not establish an exact collective-cost advantage of 2r. Calibration is pointwise at a fixed positive spectrum, with no uniform finite-sample or efficient local-circuit claim. Use the cited primary sources for attribution; the numerical checks do not establish priority.

@@ -7,7 +7,7 @@ The smallest mixed-state example has two occupied levels and one empty level. It
 Take
 
 ```math
-\rho_p=\operatorname{diag}(p,1-p,0),\qquad 0\lt p\lt1.
+\rho_p=\mathrm{diag}(p,1-p,0),\qquad 0\lt p\lt1.
 ```
 
 A general tangent to the rank-two manifold has the form
@@ -25,7 +25,7 @@ The coordinate $`a`$ changes the occupied populations. The two $`12`$ coordinate
 In the coordinate order $`(a,x_{12},y_{12},x_{13},y_{13},x_{23},y_{23})`$,
 
 ```math
-J=\operatorname{diag}\left(
+J=\mathrm{diag}\left(
 \frac1{p(1-p)},\ 4,\ 4,\ \frac4p,\ \frac4p,
 \ \frac4{1-p},\ \frac4{1-p}\right).
 ```
@@ -61,7 +61,7 @@ The pair probabilities are all $`1/8`$. The first Fourier family has three proba
 Substituting in the [exact Fisher identity](construction.md) gives
 
 ```math
-I=\operatorname{diag}\left(
+I=\mathrm{diag}\left(
 \frac1{2p(1-p)},\ 1,\ 1,\ \frac1p,\ \frac1p,
 \ \frac1{1-p},\ \frac1{1-p}\right).
 ```
@@ -70,7 +70,7 @@ Consequently,
 
 ```math
 J^{-1/2}IJ^{-1/2}
-=\operatorname{diag}\left(\frac12,
+=\mathrm{diag}\left(\frac12,
 \frac14,\frac14,\frac14,\frac14,\frac14,\frac14\right).
 ```
 
@@ -81,8 +81,8 @@ The normalized trace is two, saturating the full Gill–Massar budget $`d-1`$. T
 For the illustrative weight $`W=J`$, the local score estimator's attained cost per inverse sample size is
 
 ```math
-\operatorname{Tr}(JI^{-1})=2+6\times4=26,
-\qquad \operatorname{Tr}(JJ^{-1})=7.
+\mathrm{Tr}(JI^{-1})=2+6\times4=26,
+\qquad \mathrm{Tr}(JJ^{-1})=7.
 ```
 
 The first value is the cost of this E-optimal readout. It is not asserted to minimize that scalar cost over all measurements. E-optimality optimizes the least information fraction; minimizing a specified weighted sum of variances is a different design problem.

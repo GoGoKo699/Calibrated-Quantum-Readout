@@ -19,14 +19,14 @@ Fix
 ```math
 \rho=\sum_{j=1}^{r}\lambda_j|e_j\rangle\langle e_j|,
 \qquad
-\lambda_j>0,\qquad \sum_j\lambda_j=1,
+\lambda_j\gt 0,\qquad \sum_j\lambda_j=1,
 ```
 
-and write $`P`$ for its support projector, $`Q=\mathbb I-P`$, and $`k=d-r>0`$. The full real tangent space is
+and write $`P`$ for its support projector, $`Q=\mathbb I-P`$, and $`k=d-r\gt 0`$. The full real tangent space is
 
 ```math
 \mathcal T_\rho
-=\{X=X^\dagger:\operatorname{tr}X=0,\ QXQ=0\},
+=\{X=X^\dagger:\mathrm{tr}\,X=0,\ QXQ=0\},
 \qquad
 \dim\mathcal T_\rho=r(2d-r)-1.
 ```
@@ -66,7 +66,7 @@ M(\Omega)=\mathbb I.
 Use the finite scalar trace measure
 
 ```math
-\mu(A)=\operatorname{tr}M(A),
+\mu(A)=\mathrm{tr}\,M(A),
 \qquad
 \mu(\Omega)=d.
 ```
@@ -77,7 +77,7 @@ In finite Hilbert-space dimension, the matrix-valued Radon–Nikodym derivative 
 M(A)=\int_A E(\omega)\,d\mu(\omega),
 \qquad
 E(\omega)\succeq0,\qquad
-\operatorname{tr}E(\omega)=1
+\mathrm{tr}\,E(\omega)=1
 \quad\text{for }\mu\text{-almost every }\omega.
 ```
 
@@ -86,9 +86,9 @@ Indeed, each matrix entry of $`M`$ is absolutely continuous with respect to $`\m
 The outcome probability density and its derivative in tangent direction $`X`$ are
 
 ```math
-p(\omega)=\operatorname{tr}\bigl(\rho E(\omega)\bigr),
+p(\omega)=\mathrm{tr}\bigl(\rho E(\omega)\bigr),
 \qquad
-q_X(\omega)=\operatorname{tr}\bigl(XE(\omega)\bigr).
+q_X(\omega)=\mathrm{tr}\bigl(XE(\omega)\bigr).
 ```
 
 At an outcome with $`p(\omega)=0`$, positivity implies $`E(\omega)P=PE(\omega)=0`$. To see this in the eigenbasis of $`\rho`$, the identity $`\sum_j\lambda_j E_{jj}=0`$ forces every occupied diagonal entry to vanish, and positive semidefiniteness then forces its row and column to vanish. Since $`QXQ=0`$, it follows that $`q_X(\omega)=0`$ for every allowed tangent.
@@ -98,12 +98,12 @@ The score and its Fisher form are therefore defined by
 ```math
 \ell_X(\omega)=
 \begin{cases}
-q_X(\omega)/p(\omega),&p(\omega)>0,\\
+q_X(\omega)/p(\omega),&p(\omega)\gt 0,\\
 0,&p(\omega)=0,
 \end{cases}
 \qquad
 I_M(X,Y)
-=\int_{\{p>0\}}\frac{q_Xq_Y}{p}\,d\mu.
+=\int_{\{p\gt 0\}}\frac{q_Xq_Y}{p}\,d\mu.
 ```
 
 This is the ordinary score convention: zero-probability outcomes contribute zero at the calibration point. When the classical model is differentiable in quadratic mean, it is its usual regular Fisher form. Direction-dependent limits at zero-probability outcomes are not substituted into this definition. The attaining measurement avoids the issue because every outcome probability is positive; the operational regularity discussion is in [estimation](estimation.md).
@@ -114,14 +114,14 @@ These forms are finite. For an SLD $`L_X`$, Cauchy–Schwarz gives pointwise
 q_X(\omega)^2
 \le
 p(\omega)\,
-\operatorname{tr}\bigl(\rho L_XE(\omega)L_X\bigr).
+\mathrm{tr}\bigl(\rho L_XE(\omega)L_X\bigr).
 ```
 
 Integrating and using normalization gives
 
 ```math
 I_M(X)\le
-\operatorname{tr}(\rho L_X^2)=J_\rho(X).
+\mathrm{tr}(\rho L_X^2)=J_\rho(X).
 ```
 
 ## Information budget for support rotations
@@ -140,7 +140,7 @@ B^\dagger&0
 \subset\mathcal T_\rho.
 ```
 
-It has real dimension $`2rk`$. These are legitimate two-sided rank-preserving tangents. Explicitly, let $`D=\operatorname{diag}(\lambda_1,\ldots,\lambda_r)`$ and define the skew-Hermitian generator
+It has real dimension $`2rk`$. These are legitimate two-sided rank-preserving tangents. Explicitly, let $`D=\mathrm{diag}(\lambda_1,\ldots,\lambda_r)`$ and define the skew-Hermitian generator
 
 ```math
 K_B=
@@ -179,7 +179,7 @@ In these coordinates the SLD Fisher matrix restricted to $`\mathcal C_\rho`$ is 
 
 ```math
 J_{\mathcal C}
-=\operatorname{diag}_{j,a}
+=\mathrm{diag}_{j,a}
 \left(\frac4{\lambda_j},\frac4{\lambda_j}\right).
 ```
 
@@ -194,17 +194,17 @@ E_{aa}^{K}=\langle f_a|E|f_a\rangle.
 The derivatives in the two basis directions are
 
 ```math
-q_{R_{ja}}=2\operatorname{Re}E_{ja},
+q_{R_{ja}}=2\mathrm{Re}\,E_{ja},
 \qquad
-q_{S_{ja}}=2\operatorname{Im}E_{ja}.
+q_{S_{ja}}=2\mathrm{Im}\,E_{ja}.
 ```
 
 Consequently,
 
 ```math
-\operatorname{tr}\!\left(J_{\mathcal C}^{-1}I_{\mathcal C}\right)
+\mathrm{tr}\!\left(J_{\mathcal C}^{-1}I_{\mathcal C}\right)
 =
-\int_{\{p>0\}}
+\int_{\{p\gt 0\}}
 \frac{\displaystyle\sum_{j=1}^{r}\sum_{a=1}^{k}
 \lambda_j|E_{ja}|^2}
 {p}\,d\mu.
@@ -225,16 +225,16 @@ For each kernel index $`a`$, this gives
 =p\,E_{aa}^{K}.
 ```
 
-Summing over $`a`$, integrating over $`\{p>0\}`$, and using completeness establishes the refined bound:
+Summing over $`a`$, integrating over $`\{p\gt 0\}`$, and using completeness establishes the refined bound:
 
 ```math
 \begin{aligned}
-\operatorname{tr}\!\left(J_{\mathcal C}^{-1}I_{\mathcal C}\right)
+\mathrm{tr}\!\left(J_{\mathcal C}^{-1}I_{\mathcal C}\right)
 &\le
-\int_{\{p>0\}}\operatorname{tr}(QE)\,d\mu\\
+\int_{\{p\gt 0\}}\mathrm{tr}(QE)\,d\mu\\
 &\le
-\int_\Omega\operatorname{tr}(QE)\,d\mu\\
-&=\operatorname{tr}Q=k=d-r.
+\int_\Omega\mathrm{tr}(QE)\,d\mu\\
+&=\mathrm{tr}\,Q=k=d-r.
 \end{aligned}
 ```
 
@@ -242,7 +242,7 @@ Thus
 
 ```math
 \boxed{
-\operatorname{tr}\!\left(J_{\mathcal C}^{-1}I_{\mathcal C}\right)
+\mathrm{tr}\!\left(J_{\mathcal C}^{-1}I_{\mathcal C}\right)
 \le d-r.
 }
 ```
@@ -271,11 +271,11 @@ Taking the trace and applying the support-rotation bound yields
 ```math
 2rk\,c
 \le
-\operatorname{tr}\!\left(J_{\mathcal C}^{-1}I_{\mathcal C}\right)
+\mathrm{tr}\!\left(J_{\mathcal C}^{-1}I_{\mathcal C}\right)
 \le k.
 ```
 
-Since $`k>0`$,
+Since $`k\gt 0`$,
 
 ```math
 c\le\frac1{2r}.

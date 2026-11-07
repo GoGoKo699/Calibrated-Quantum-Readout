@@ -1,0 +1,53 @@
+name: Verify source and capture GitHub pages
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out the exact source revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+
+      - name: Set up Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+
+      - name: Verify the scientific calculations
+        run: |
+          python3 -m pip install -r verification/requirements.txt
+          python3 verification/check_readout.py
+
+      - name: Install the browser in temporary storage
+        run: |
+          npm install --prefix "$RUNNER_TEMP/readout-browser" playwright@1.56.1
+          "$RUNNER_TEMP/readout-browser/node_modules/.bin/playwright" install --with-deps chromium
+
+      - name: Capture the exact GitHub pages
+        env:
+          NODE_PATH: ${{ runner.temp }}/readout-browser/node_modules
+        run: |
+          node verification/capture_github.cjs \
+            --root "$GITHUB_WORKSPACE" \
+            --repository "$GITHUB_REPOSITORY" \
+            --revision "$(git rev-parse HEAD)" \
+            --output "$RUNNER_TEMP/readout-hosted"
+
+      - name: Retain the actual hosted captures
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: readout-hosted
+          path: ${{ runner.temp }}/readout-hosted
+          if-no-files-found: warn
+          retention-days: 7

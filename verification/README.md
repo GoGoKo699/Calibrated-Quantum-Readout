@@ -27,7 +27,7 @@ Run these commands from the repository root. The second check invocation additio
 | General-measurement converse | Random rank-one frames, their coarse-grainings, and eigenbasis projective measurements at three dimension/rank pairs. Include exact zero-probability kernel outcomes under the ordinary-score convention. |
 | Basis invariance | Apply a common deterministic random unitary to the state, tangents, and effects at three dimension/rank pairs, then compare the resulting FI with the original matrix. |
 
-The construction pairs are $`(d,r)=(3,1),(3,2),(4,2),(7,3),(7,6),(6,6),(16,3)`$. The $`(6,6)`$ cases are **full-rank construction controls**: the displayed POVM still exists there, but the rank-deficient optimality theorem does not apply. For $`r>1`$, the occupied eigenvalues are proportional to a geometric progression with largest-to-smallest ratio $`10^q`$, where $`q\in\{0,4,8\}`$. The pure-state case has only one occupied eigenvalue.
+The construction pairs are $`(d,r)=(3,1),(3,2),(4,2),(7,3),(7,6),(6,6),(16,3)`$. The $`(6,6)`$ cases are **full-rank construction controls**: the displayed POVM still exists there, but the rank-deficient optimality theorem does not apply. For $`r\gt 1`$, the occupied eigenvalues are proportional to a geometric progression with largest-to-smallest ratio $`10^q`$, where $`q\in\{0,4,8\}`$. The pure-state case has only one occupied eigenvalue.
 
 ## Recorded result
 
@@ -46,3 +46,20 @@ The report provides the remaining residuals and calibration fractions. Large abs
 [plot_calibration.py](plot_calibration.py) produces [calibration.svg](../science/figures/calibration.svg) from the exact formula implemented in [readout.py](readout.py). The plotted model has rank two, dimension three, eigenvalues $`(1-\varepsilon,\varepsilon,0)`$, and a fixed error mixing the strongly occupied eigenvector with the kernel. Its comparison with direct POVM probabilities is part of the check above.
 
 The plot illustrates sensitivity of this specified readout to calibration error. It does not claim an optimal lower bound on the samples needed to calibrate an arbitrary measurement.
+
+## Hosted page captures
+
+The [verification workflow](../.github/workflows/verify.yml) runs the numerical checks and captures every tracked Markdown page from its exact GitHub commit. The [capture script](capture_github.cjs) uses anonymous Chromium at widths 1440 and 760 pixels. It saves the page HTML, full-page screenshots, and the rendered article DOM with the actual bounding rectangles of its elements. A manifest records the source revision, Git tree, page hashes, browser version, capture times, and artifact hashes.
+
+The workflow uses read-only repository access. Its `readout-hosted` artifact is retained for seven days. Captures can also be reproduced locally after installing Playwright 1.56.1 and its Chromium browser in a temporary dependency directory:
+
+```bash
+NODE_PATH=/absolute/temporary/dependencies/node_modules \
+node verification/capture_github.cjs \
+  --root "$PWD" \
+  --repository GoGoKo699/Calibrated-Quantum-Readout \
+  --revision "$(git rev-parse HEAD)" \
+  --output /absolute/new-empty-capture-directory
+```
+
+Capture success establishes that the pinned pages and their artifacts were collected. Comparing the captured mathematical structure with the source, and inspecting equation bodies, tables, navigation, and narrow-screen layout, are separate review steps. A screenshot or a successful numerical check alone does not establish that GitHub displayed every expression correctly.
