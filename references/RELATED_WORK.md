@@ -48,7 +48,7 @@ After calibration at one nominal point, the same POVM satisfies $`I_M\succeq J_\
 \le 2r\operatorname{Tr}(WJ_\rho^{-1}).
 ```
 
-This is a simultaneous approximation guarantee, not a claim that the POVM individually minimizes every weighted risk. It concerns an explicit attainable classical information matrix. It does not identify a Nagaoka–Hayashi relaxation with the true optimized individual-measurement cost, and it does not determine the exact individual-to-Holevo ratio. Where the regular local asymptotic comparison applies, the SLD bound is a lower bound on the Holevo cost, so the displayed inequality supplies a $`2r`$ upper bound on that ratio; its sharpness is a separate question.
+This is a simultaneous approximation guarantee, not a claim that the POVM individually minimizes every weighted risk. It concerns an explicit attainable classical information matrix. Under the [local asymptotic minimax definitions](../science/estimation.md#individual-and-collective-cost-comparison), the score upper bound and Bayesian lower bound give $`C_{\mathrm{ind}}\le2rC_{\mathrm{SLD}}\le2rC_{\mathrm{coll}}`$. Since the Holevo bound also obeys $`C_H\ge C_{\mathrm{SLD}}`$, one has $`C_{\mathrm{ind}}\le2rC_H`$ without assuming $`C_H=C_{\mathrm{coll}}`$. Neither comparison determines its exact cost ratio or identifies a Nagaoka–Hayashi relaxation with the true optimized individual-measurement cost.
 
 The pointwise statement assumes a calibrated nominal eigenbasis and rank. An unknown-state implementation requires localization before choosing this POVM. Although the measurement weights do not depend on the occupied eigenvalues, the localization accuracy and sample cost can depend on small occupied eigenvalues. The present theorem alone is neither a spectrum-uniform finite-sample calibration guarantee nor an unknown-rank procedure. Rank-changing directions and singular, direction-dependent definitions of information at zero-probability outcomes are outside its ordinary-score fixed-rank model.
 
@@ -91,6 +91,10 @@ Zhu [Zhu14] treats informationally overcomplete measurements and optimal reconst
 The cited NUS repository and PDF endpoints for [Zhu12] returned HTTP 403. The thesis was not inspected in full; [Zhu14] cannot substitute for all of its contents. The older mixed-state optimal-design and Fisher-symmetry comparison rests on accessible primary papers, including [Li16], [ZH18], [Zhu14], and [Suzuki20]. No exhaustive priority claim is made.
 
 ## Source and version register
+
+### DDG20
+
+R. Demkowicz-Dobrzański, W. Górecki, and M. Guţă, *Multi-parameter estimation beyond quantum Fisher information*, J. Phys. A: Math. Theor. **53**, 363001 (2020), [DOI](https://doi.org/10.1088/1751-8121/ab8ef3). The sole educational anchor is [2001.11742v2](https://arxiv.org/abs/2001.11742v2), 1 September 2020, with [open full text](https://arxiv.org/html/2001.11742v2). Section 2.1, Eq. (9), supplies the classical local score-estimator foundation. Section 4.6.3 explicitly limits its general QLAN treatment to full-rank states; the project's fixed-rank pilot argument is supplied separately in [estimation](../science/estimation.md#learning-the-calibration-with-a-pilot-sample).
 
 ### GM00
 

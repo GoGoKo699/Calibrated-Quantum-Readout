@@ -30,6 +30,8 @@ Any parameterization with redundant directions should first be reduced to identi
 
 ## Exact local score estimator at a known nominal point
 
+The score-estimator construction is standard; see [DDG20, Section 2.1, Eq. (9)](../references/RELATED_WORK.md#ddg20). Applying it to the positive-probability readout gives the following explicit covariance guarantee.
+
 Measure $`n`$ independent copies with the same fixed POVM and let $`Z_1,\ldots,Z_n`$ be their outcomes. The estimator
 
 ```math

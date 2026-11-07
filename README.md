@@ -45,6 +45,12 @@ Start with the [scientific overview](science/README.md), or go directly to the r
 
 The [LLM reading guide](llms.txt) maps the same questions to source files.
 
+## Learning route
+
+The selected educational anchor is Demkowicz-Dobrzański, Górecki, and Guţă, *Multi-parameter estimation beyond Quantum Fisher Information*, [arXiv:2001.11742v2](https://arxiv.org/abs/2001.11742v2), published in J. Phys. A **53**, 363001 (2020).
+
+Start with the [source-to-project bridge](learning/README.md). The [anchor guide](learning/ANCHOR.md) identifies the relevant sections, translates notation, and records which arguments are supplied by this project. The [30-milestone map](learning/MILESTONES.md) develops the background in M01–M12 and the construction, optimality, and operational meaning in M13–M30. Each phase ends by connecting its parts into the complete problem or result.
+
 ## Estimation and scope
 
 The matrix inequality pulls back to every identifiable smooth submodel of the fixed-rank manifold. A locally unbiased score estimator at the calibrated point has covariance $`I_M^{-1}/n\preceq 2rJ_\rho^{-1}/n`$. Under explicit fixed-state local regularity and localization conditions, a pilot using a vanishing fraction of the copies supplies an asymptotic implementation; [estimation](science/estimation.md) gives the risk statement, including nuisance parameters and degenerate positive eigenvalues.
