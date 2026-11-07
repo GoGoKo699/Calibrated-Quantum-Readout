@@ -1,0 +1,476 @@
+{
+  "status": "pass",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "rng_seed": 699,
+  "construction": [
+    {
+      "d": 3,
+      "r": 1,
+      "spectral_exponent": 0,
+      "role": "rank_deficient_theorem",
+      "outcomes": 5,
+      "minimum_probability": 0.2,
+      "completeness_error": 6.938893903907228e-17,
+      "relative_identity_error": 1.0007526701132639e-16,
+      "minimum_eigenvalue_error": 2.220446049250313e-16,
+      "full_trace_error": 0.0,
+      "cross_trace_error": 0.0
+    },
+    {
+      "d": 3,
+      "r": 1,
+      "spectral_exponent": 4,
+      "role": "rank_deficient_theorem",
+      "outcomes": 5,
+      "minimum_probability": 0.2,
+      "completeness_error": 6.938893903907228e-17,
+      "relative_identity_error": 1.0007526701132639e-16,
+      "minimum_eigenvalue_error": 2.220446049250313e-16,
+      "full_trace_error": 0.0,
+      "cross_trace_error": 0.0
+    },
+    {
+      "d": 3,
+      "r": 1,
+      "spectral_exponent": 8,
+      "role": "rank_deficient_theorem",
+      "outcomes": 5,
+      "minimum_probability": 0.2,
+      "completeness_error": 6.938893903907228e-17,
+      "relative_identity_error": 1.0007526701132639e-16,
+      "minimum_eigenvalue_error": 2.220446049250313e-16,
+      "full_trace_error": 0.0,
+      "cross_trace_error": 0.0
+    },
+    {
+      "d": 3,
+      "r": 2,
+      "spectral_exponent": 0,
+      "role": "rank_deficient_theorem",
+      "outcomes": 10,
+      "minimum_probability": 0.08333333333333333,
+      "completeness_error": 2.221632307069807e-16,
+      "relative_identity_error": 8.663245197543175e-17,
+      "minimum_eigenvalue_error": 3.0531133177191805e-16,
+      "full_trace_error": 6.661338147750939e-16,
+      "cross_trace_error": 2.220446049250313e-16
+    },
+    {
+      "d": 3,
+      "r": 2,
+      "spectral_exponent": 4,
+      "role": "rank_deficient_theorem",
+      "outcomes": 10,
+      "minimum_probability": 1.6665000166650003e-05,
+      "completeness_error": 2.221632307069807e-16,
+      "relative_identity_error": 1.1933748036548122e-16,
+      "minimum_eigenvalue_error": 3.3306690738754696e-16,
+      "full_trace_error": 8.881784197001252e-16,
+      "cross_trace_error": 2.220446049250313e-16
+    },
+    {
+      "d": 3,
+      "r": 2,
+      "spectral_exponent": 8,
+      "role": "rank_deficient_theorem",
+      "outcomes": 10,
+      "minimum_probability": 1.6666666500000002e-09,
+      "completeness_error": 2.221632307069807e-16,
+      "relative_identity_error": 1.0687647109999336e-16,
+      "minimum_eigenvalue_error": 1.6653345369377348e-16,
+      "full_trace_error": 0.0,
+      "cross_trace_error": 1.1102230246251565e-16
+    },
+    {
+      "d": 4,
+      "r": 2,
+      "spectral_exponent": 0,
+      "role": "rank_deficient_theorem",
+      "outcomes": 14,
+      "minimum_probability": 0.05,
+      "completeness_error": 2.220446049250313e-16,
+      "relative_identity_error": 5.704137081549322e-17,
+      "minimum_eigenvalue_error": 5.551115123125783e-17,
+      "full_trace_error": 8.881784197001252e-16,
+      "cross_trace_error": 0.0
+    },
+    {
+      "d": 4,
+      "r": 2,
+      "spectral_exponent": 4,
+      "role": "rank_deficient_theorem",
+      "outcomes": 14,
+      "minimum_probability": 9.999000099990002e-06,
+      "completeness_error": 2.220446049250313e-16,
+      "relative_identity_error": 5.801953635621154e-17,
+      "minimum_eigenvalue_error": 3.608224830031759e-16,
+      "full_trace_error": 8.881784197001252e-16,
+      "cross_trace_error": 0.0
+    },
+    {
+      "d": 4,
+      "r": 2,
+      "spectral_exponent": 8,
+      "role": "rank_deficient_theorem",
+      "outcomes": 14,
+      "minimum_probability": 9.999999900000002e-10,
+      "completeness_error": 2.220446049250313e-16,
+      "relative_identity_error": 6.554036617094096e-17,
+      "minimum_eigenvalue_error": 2.498001805406602e-16,
+      "full_trace_error": 8.881784197001252e-16,
+      "cross_trace_error": 0.0
+    },
+    {
+      "d": 7,
+      "r": 3,
+      "spectral_exponent": 0,
+      "role": "rank_deficient_theorem",
+      "outcomes": 39,
+      "minimum_probability": 0.012345679012345678,
+      "completeness_error": 6.661406742780036e-16,
+      "relative_identity_error": 1.1877527993839018e-16,
+      "minimum_eigenvalue_error": 3.3306690738754696e-16,
+      "full_trace_error": 0.0,
+      "cross_trace_error": 0.0
+    },
+    {
+      "d": 7,
+      "r": 3,
+      "spectral_exponent": 4,
+      "role": "rank_deficient_theorem",
+      "outcomes": 39,
+      "minimum_probability": 3.666670333337e-06,
+      "completeness_error": 6.661406742780036e-16,
+      "relative_identity_error": 1.2545509710626317e-16,
+      "minimum_eigenvalue_error": 4.163336342344337e-16,
+      "full_trace_error": 3.552713678800501e-15,
+      "cross_trace_error": 0.0
+    },
+    {
+      "d": 7,
+      "r": 3,
+      "spectral_exponent": 8,
+      "role": "rank_deficient_theorem",
+      "outcomes": 39,
+      "minimum_probability": 3.7033333333370367e-10,
+      "completeness_error": 6.661406742780036e-16,
+      "relative_identity_error": 1.2443694778222203e-16,
+      "minimum_eigenvalue_error": 2.7755575615628914e-16,
+      "full_trace_error": 3.6006753134643077e-12,
+      "cross_trace_error": 0.0
+    },
+    {
+      "d": 7,
+      "r": 6,
+      "spectral_exponent": 0,
+      "role": "rank_deficient_theorem",
+      "outcomes": 78,
+      "minimum_probability": 0.009259259259259259,
+      "completeness_error": 4.440892098500626e-16,
+      "relative_identity_error": 6.58164261936442e-17,
+      "minimum_eigenvalue_error": 1.8041124150158794e-16,
+      "full_trace_error": 8.881784197001252e-16,
+      "cross_trace_error": 2.220446049250313e-16
+    },
+    {
+      "d": 7,
+      "r": 6,
+      "spectral_exponent": 4,
+      "role": "rank_deficient_theorem",
+      "outcomes": 78,
+      "minimum_probability": 4.6751334333931274e-06,
+      "completeness_error": 4.440892098500626e-16,
+      "relative_identity_error": 2.7712856183057863e-17,
+      "minimum_eigenvalue_error": 1.249000902703301e-16,
+      "full_trace_error": 7.194245199571014e-14,
+      "cross_trace_error": 2.220446049250313e-16
+    },
+    {
+      "d": 7,
+      "r": 6,
+      "spectral_exponent": 8,
+      "role": "rank_deficient_theorem",
+      "outcomes": 78,
+      "minimum_probability": 5.416006310721018e-10,
+      "completeness_error": 4.440892098500626e-16,
+      "relative_identity_error": 3.2324961388310065e-17,
+      "minimum_eigenvalue_error": 1.3877787807814457e-16,
+      "full_trace_error": 2.608260274428176e-10,
+      "cross_trace_error": 2.220446049250313e-16
+    },
+    {
+      "d": 6,
+      "r": 6,
+      "spectral_exponent": 0,
+      "role": "full_rank_construction_control",
+      "outcomes": 66,
+      "minimum_probability": 0.013888888888888885,
+      "completeness_error": 5.551115123125783e-16,
+      "relative_identity_error": 5.632219807790944e-17,
+      "minimum_eigenvalue_error": 2.0816681711721685e-16,
+      "full_trace_error": 0.0,
+      "cross_trace_error": 0.0
+    },
+    {
+      "d": 6,
+      "r": 6,
+      "spectral_exponent": 4,
+      "role": "full_rank_construction_control",
+      "outcomes": 66,
+      "minimum_probability": 1.4025400300179382e-05,
+      "completeness_error": 5.551115123125783e-16,
+      "relative_identity_error": 1.473014016818653e-17,
+      "minimum_eigenvalue_error": 2.3592239273284576e-16,
+      "full_trace_error": 1.3145040611561853e-13,
+      "cross_trace_error": 0.0
+    },
+    {
+      "d": 6,
+      "r": 6,
+      "spectral_exponent": 8,
+      "role": "full_rank_construction_control",
+      "outcomes": 66,
+      "minimum_probability": 1.6248018932163054e-09,
+      "completeness_error": 5.551115123125783e-16,
+      "relative_identity_error": 9.603483168027467e-18,
+      "minimum_eigenvalue_error": 1.8041124150158794e-16,
+      "full_trace_error": 4.389173469121488e-10,
+      "cross_trace_error": 0.0
+    },
+    {
+      "d": 16,
+      "r": 3,
+      "spectral_exponent": 0,
+      "role": "rank_deficient_theorem",
+      "outcomes": 93,
+      "minimum_probability": 0.004115226337448559,
+      "completeness_error": 2.1282660978786103e-15,
+      "relative_identity_error": 5.056819226496702e-16,
+      "minimum_eigenvalue_error": 1.4710455076283324e-15,
+      "full_trace_error": 5.329070518200751e-15,
+      "cross_trace_error": 0.0
+    },
+    {
+      "d": 16,
+      "r": 3,
+      "spectral_exponent": 4,
+      "role": "rank_deficient_theorem",
+      "outcomes": 93,
+      "minimum_probability": 1.2222234444456666e-06,
+      "completeness_error": 2.1282660978786103e-15,
+      "relative_identity_error": 5.105473878933341e-16,
+      "minimum_eigenvalue_error": 1.304512053934559e-15,
+      "full_trace_error": 3.552713678800501e-15,
+      "cross_trace_error": 3.552713678800501e-15
+    },
+    {
+      "d": 16,
+      "r": 3,
+      "spectral_exponent": 8,
+      "role": "rank_deficient_theorem",
+      "outcomes": 93,
+      "minimum_probability": 1.2344444444456788e-10,
+      "completeness_error": 2.1282660978786103e-15,
+      "relative_identity_error": 5.098756009954779e-16,
+      "minimum_eigenvalue_error": 1.3322676295501878e-15,
+      "full_trace_error": 3.227640377190255e-12,
+      "cross_trace_error": 3.552713678800501e-15
+    }
+  ],
+  "qutrit_and_score": {
+    "spectrum": [
+      0.17,
+      0.83,
+      0.0
+    ],
+    "closed_form_error": 2.6645352591003757e-15,
+    "achieved_cost": 26.000000000000007,
+    "score_moment_error": 2.220446049250313e-16
+  },
+  "calibration": [
+    {
+      "d": 3,
+      "r": 2,
+      "epsilon": 0.001,
+      "delta": 0.0,
+      "direct_fraction": 0.25,
+      "formula_error": 0.0
+    },
+    {
+      "d": 3,
+      "r": 2,
+      "epsilon": 0.001,
+      "delta": 0.001,
+      "direct_fraction": 0.24975024983391605,
+      "formula_error": 8.326672684688674e-17
+    },
+    {
+      "d": 3,
+      "r": 2,
+      "epsilon": 0.001,
+      "delta": 0.1,
+      "direct_fraction": 0.02259210301394609,
+      "formula_error": 3.469446951953614e-18
+    },
+    {
+      "d": 3,
+      "r": 2,
+      "epsilon": 1e-06,
+      "delta": 0.0,
+      "direct_fraction": 0.25,
+      "formula_error": 0.0
+    },
+    {
+      "d": 3,
+      "r": 2,
+      "epsilon": 1e-06,
+      "delta": 0.001,
+      "direct_fraction": 0.12499995833357365,
+      "formula_error": 2.7755575615628914e-17
+    },
+    {
+      "d": 3,
+      "r": 2,
+      "epsilon": 1e-06,
+      "delta": 0.1,
+      "direct_fraction": 2.4833550460573635e-05,
+      "formula_error": 3.3881317890172014e-21
+    },
+    {
+      "d": 7,
+      "r": 3,
+      "epsilon": 0.001,
+      "delta": 0.0,
+      "direct_fraction": 0.16666666666666666,
+      "formula_error": 0.0
+    },
+    {
+      "d": 7,
+      "r": 3,
+      "epsilon": 0.001,
+      "delta": 0.001,
+      "direct_fraction": 0.16653327363379722,
+      "formula_error": 0.0
+    },
+    {
+      "d": 7,
+      "r": 3,
+      "epsilon": 0.001,
+      "delta": 0.1,
+      "direct_fraction": 0.01839045589126125,
+      "formula_error": 0.0
+    },
+    {
+      "d": 7,
+      "r": 3,
+      "epsilon": 1e-06,
+      "delta": 0.0,
+      "direct_fraction": 0.16666666666666666,
+      "formula_error": 0.0
+    },
+    {
+      "d": 7,
+      "r": 3,
+      "epsilon": 1e-06,
+      "delta": 0.001,
+      "direct_fraction": 0.0925925137176468,
+      "formula_error": 0.0
+    },
+    {
+      "d": 7,
+      "r": 3,
+      "epsilon": 1e-06,
+      "delta": 0.1,
+      "direct_fraction": 2.0694085715306284e-05,
+      "formula_error": 0.0
+    }
+  ],
+  "general_measurements": [
+    {
+      "d": 3,
+      "r": 1,
+      "measurement": "rank_one_frame",
+      "cross_trace": 2.0,
+      "budget": 2
+    },
+    {
+      "d": 3,
+      "r": 1,
+      "measurement": "coarse_grained_frame",
+      "cross_trace": 0.370717554508044,
+      "budget": 2
+    },
+    {
+      "d": 3,
+      "r": 1,
+      "measurement": "eigenbasis_with_zero_outcomes",
+      "cross_trace": 0.0,
+      "budget": 2
+    },
+    {
+      "d": 3,
+      "r": 1,
+      "measurement": "common_unitary_rotation",
+      "relative_error": 7.443201329426472e-16
+    },
+    {
+      "d": 4,
+      "r": 2,
+      "measurement": "rank_one_frame",
+      "cross_trace": 2.0000000000000044,
+      "budget": 2
+    },
+    {
+      "d": 4,
+      "r": 2,
+      "measurement": "coarse_grained_frame",
+      "cross_trace": 0.50179303402827,
+      "budget": 2
+    },
+    {
+      "d": 4,
+      "r": 2,
+      "measurement": "eigenbasis_with_zero_outcomes",
+      "cross_trace": 0.0,
+      "budget": 2
+    },
+    {
+      "d": 4,
+      "r": 2,
+      "measurement": "common_unitary_rotation",
+      "relative_error": 1.0649942869708204e-13
+    },
+    {
+      "d": 7,
+      "r": 3,
+      "measurement": "rank_one_frame",
+      "cross_trace": 3.999999999999999,
+      "budget": 4
+    },
+    {
+      "d": 7,
+      "r": 3,
+      "measurement": "coarse_grained_frame",
+      "cross_trace": 1.2057413887743749,
+      "budget": 4
+    },
+    {
+      "d": 7,
+      "r": 3,
+      "measurement": "eigenbasis_with_zero_outcomes",
+      "cross_trace": 0.0,
+      "budget": 4
+    },
+    {
+      "d": 7,
+      "r": 3,
+      "measurement": "common_unitary_rotation",
+      "relative_error": 8.981767966051756e-14
+    }
+  ],
+  "source_sha256": {
+    "check_readout.py": "142ad51b9431a4ac99264891a360c7b5d51859cdef408bbcf77d1e46274ad792",
+    "readout.py": "4de4e35291b66d54a97e723822d229d46827f18f8dabcb0dfee0fa5ddcf945f5"
+  }
+}

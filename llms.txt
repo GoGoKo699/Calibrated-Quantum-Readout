@@ -1,0 +1,20 @@
+# Calibrated Quantum Readout
+
+> A finite calibrated single-copy measurement attains the exact worst-direction SLD Fisher fraction 1/(2r) on the full tangent of every rank-r state with 1 <= r < d. The intermediate mixed-rank attainment is the focus; the pure-state endpoint and the converse have prior sources.
+
+## Scientific sources
+
+- [Overview](science/README.md): motivation, proof route, interpretation, and attribution.
+- [Model](science/model.md): exact-rank promise, tangent space, QFI convention, and theorem quantifiers.
+- [Construction](science/construction.md): all 2rd-r effects, probabilities, completeness, and the exact Fisher identity.
+- [Optimality](science/optimality.md): general-POVM score convention, inherited support-rotation budget, and sharp fraction.
+- [Examples](science/examples.md): rank-two qutrit matrices, ten outcomes, achieved cost, and fixed-support comparison.
+- [Estimation](science/estimation.md): exact nominal score estimator, nuisance parameters, pilot conditions, local asymptotic risk, and individual/collective costs.
+- [Resources](science/resources.md): measurement settings, statistical inputs, all-copy accounting, implementation scope, and calibration sensitivity.
+- [Related work](references/RELATED_WORK.md): theorem-level comparisons, precise inherited ingredients, source identities, and access limits.
+- [Bibliography](references/references.bib): machine-readable references.
+- [Verification](verification/README.md): runnable checks, environments, recorded outputs, and figure generation.
+
+## Interpretation boundaries
+
+Keep the measurement frozen when differentiating. The design requires an occupied eigenbasis and rank, but no occupied eigenvalue values. Estimation additionally uses likelihood probabilities and model derivatives. Equality of the design optimum applies to the full fixed-rank tangent; restricted submodels inherit a lower guarantee and can have better optima. The exact Fisher fraction does not establish an exact collective-cost advantage of 2r. Calibration is pointwise at a fixed positive spectrum, with no uniform finite-sample or efficient local-circuit claim. Use the cited primary sources for attribution; the numerical checks do not establish priority.
