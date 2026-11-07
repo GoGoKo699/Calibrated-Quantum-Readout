@@ -34,7 +34,7 @@ The support-rotation upper bound and the pure-state and support-pair measurement
 The converse deserves explicit credit. Write $`I_{\rm cross}`$ and $`J_{\rm cross}`$ for restrictions to the $`2r(d-r)`$ real directions that rotate support into kernel. The known inequality gives
 
 ```math
-\operatorname{Tr}(J_{\rm cross}^{-1}I_{\rm cross})\le d-r.
+\mathrm{Tr}(J_{\rm cross}^{-1}I_{\rm cross})\le d-r.
 ```
 
 Consequently, domination by $`cJ_\rho`$ on every tangent requires $`2r(d-r)c\le d-r`$. The construction attains equality on this entire subspace and has nonnegative excess information on the remaining tangent directions. This explains both why the constant is optimal and why optimality does not require Fisher symmetry on every direction.
@@ -44,8 +44,8 @@ Consequently, domination by $`cJ_\rho`$ on every tangent requires $`2r(d-r)c\le 
 After calibration at one nominal point, the same POVM satisfies $`I_M\succeq J_\rho/(2r)`$ independently of a later choice of positive semidefinite quadratic weight $`W`$. On identifiable coordinates, inverse order yields
 
 ```math
-\operatorname{Tr}(W I_M^{-1})
-\le 2r\operatorname{Tr}(WJ_\rho^{-1}).
+\mathrm{Tr}(W I_M^{-1})
+\le 2r\mathrm{Tr}(WJ_\rho^{-1}).
 ```
 
 This is a simultaneous approximation guarantee, not a claim that the POVM individually minimizes every weighted risk. It concerns an explicit attainable classical information matrix. Under the [local asymptotic minimax definitions](../science/estimation.md#individual-and-collective-cost-comparison), the score upper bound and Bayesian lower bound give $`C_{\mathrm{ind}}\le2rC_{\mathrm{SLD}}\le2rC_{\mathrm{coll}}`$. Since the Holevo bound also obeys $`C_H\ge C_{\mathrm{SLD}}`$, one has $`C_{\mathrm{ind}}\le2rC_H`$ without assuming $`C_H=C_{\mathrm{coll}}`$. Neither comparison determines its exact cost ratio or identifies a Nagaoka–Hayashi relaxation with the true optimized individual-measurement cost.

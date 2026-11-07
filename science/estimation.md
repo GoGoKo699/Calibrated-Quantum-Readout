@@ -13,7 +13,7 @@ Let $`\theta\mapsto\rho_\theta`$ be a smooth model on an open subset of $`\mathb
 Construct $`M_{\rho_{\theta_0}}=\{E_z\}`$ in an eigenbasis of the nominal state, and hold every effect fixed as $`\theta`$ varies. Define
 
 ```math
-p_z(\theta)=\operatorname{tr}(\rho_\theta E_z),
+p_z(\theta)=\mathrm{tr}(\rho_\theta E_z),
 \qquad
 s_z=\left.\nabla_\theta\log p_z(\theta)\right|_{\theta=\theta_0},
 \qquad
@@ -43,7 +43,7 @@ is locally unbiased at $`\theta_0`$ and has covariance
 
 ```math
 \boxed{
-\operatorname{Cov}_{\theta_0}(\widehat\theta_n)
+\mathrm{Cov}_{\theta_0}(\widehat\theta_n)
 =\frac1n I_0^{-1}
 \preceq\frac{2r}{n}J_0^{-1}.
 }
@@ -84,8 +84,8 @@ The estimator returns local coordinates. It need not lie inside the physical par
 For any real positive semidefinite quadratic weight $`W`$, inverse-matrix monotonicity gives
 
 ```math
-\operatorname{tr}(W I_0^{-1})
-\le 2r\operatorname{tr}(W J_0^{-1}).
+\mathrm{tr}(W I_0^{-1})
+\le 2r\mathrm{tr}(W J_0^{-1}).
 ```
 
 This includes singular weights. If $`\theta=(\psi,\eta)`$ contains parameters of interest $`\psi`$ and nuisance parameters $`\eta`$, use the Fisher matrices for the complete identifiable vector. A weight
@@ -136,7 +136,7 @@ One can choose the pilot POVM with positive definite effects. Starting from any 
 ```math
 \widetilde H_a
 =(1-\eta)H_a
-+\eta\frac{\operatorname{tr}H_a}{d}\mathbb I.
++\eta\frac{\mathrm{tr}\,H_a}{d}\mathbb I.
 ```
 
 These effects sum to $`\mathbb I`$, are positive definite, and remain informationally complete: on trace-zero perturbations their derivatives are simply multiplied by $`1-\eta`$. Consequently the pilot has positive outcome probabilities and positive classical Fisher information on every identifiable tangent of the local model.
@@ -158,7 +158,7 @@ Use the pilot to estimate the state within the rank-$`r`$ model, choose its eige
 ```math
 \begin{aligned}
 p_z(\theta;\widetilde\theta)
-&=\operatorname{tr}\!\left(
+&=\mathrm{tr}\!\left(
 \rho_\theta E_z(\widetilde\theta)\right),\\
 \widetilde s_z
 &=\left.\nabla_\theta
@@ -196,7 +196,7 @@ To obtain its risk, put $`\Delta=\widetilde\theta-\theta_0`$. Taylor expansion o
 and
 
 ```math
-\operatorname{Var}_{\theta_0}
+\mathrm{Var}_{\theta_0}
 (\widetilde s_Z\mid\text{pilot})
 =\widetilde I+O(\|\Delta\|).
 ```
@@ -227,7 +227,7 @@ Also $`n/n_1\to1`$ and $`J(\widetilde\theta)\to J_0`$. A bounded extension on th
  n\,\mathbb E_{\theta_0}
  \left[(\widehat\theta_n-\theta_0)^{\mathsf T}
  W(\widehat\theta_n-\theta_0)\right]
-\le 2r\operatorname{tr}(WJ_0^{-1}).
+\le 2r\mathrm{tr}(WJ_0^{-1}).
 }
 ```
 
@@ -242,7 +242,7 @@ n\,\mathbb E_{\theta_0+h/\sqrt n}
 &(\widehat\theta_n-\theta_0-h/\sqrt n)^{\mathsf T}\\
 &\qquad W(\widehat\theta_n-\theta_0-h/\sqrt n)
 \bigr]
-\le 2r\operatorname{tr}(WJ_0^{-1}).
+\le 2r\mathrm{tr}(WJ_0^{-1}).
 \end{aligned}
 ```
 
@@ -287,7 +287,7 @@ Write
 
 ```math
 C_{\mathrm{SLD}}(W)
-=\operatorname{tr}(WJ_0^{-1}).
+=\mathrm{tr}(WJ_0^{-1}).
 ```
 
 ### Attainable individual upper bound
@@ -302,7 +302,7 @@ n\,\mathbb E_{\theta_0+h/\sqrt n}
 (\widehat\theta_n-\theta_0-h/\sqrt n)^{\mathsf T}
 W(\widehat\theta_n-\theta_0-h/\sqrt n)
 \bigr]
-=\operatorname{tr}(WI_0^{-1}).
+=\mathrm{tr}(WI_0^{-1}).
 ```
 
 This fixed-center protocol is admissible in the local minimax definition. The pilot construction additionally supplies the uniform upper bound without a supplied calibration, under its stated uniform local conditions. Consequently,
@@ -387,9 +387,9 @@ J_0=r\mathbb I_m,
 The locally unbiased operator tuple given by that coordinate basis has covariance matrix $`\mathbb I_m/r`$ and zero imaginary covariance. Hence $`C_H=C_{\mathrm{SLD}}=m`$; standard full-rank collective attainability applies within the known support. Gill–Massar in dimension $`r`$ gives, for individual readout,
 
 ```math
-\operatorname{tr}(J_0^{-1}I)\le r-1,
+\mathrm{tr}(J_0^{-1}I)\le r-1,
 \qquad
-\operatorname{tr}(J_0I^{-1})
+\mathrm{tr}(J_0I^{-1})
 \ge\frac{m^2}{r-1}=m(r+1).
 ```
 
@@ -398,7 +398,7 @@ The Haar rank-one POVM, or a finite weighted projective 2-design, attains $`I=J_
 For the matching local minimax lower bound, conditional Fisher information adds under classical adaptation. Applying Gill–Massar at each parameter value yields
 
 ```math
-\operatorname{tr}\!\left(J(\theta)^{-1}I_n(\theta)\right)
+\mathrm{tr}\!\left(J(\theta)^{-1}I_n(\theta)\right)
 \le n(r-1).
 ```
 
@@ -409,7 +409,7 @@ n\,\text{Bayes risk for }W=J_0
 \ge
 \frac{m^2}{
 r-1+o(1)+
-\operatorname{tr}(J_0^{-1}K_\pi)/H^2
+\mathrm{tr}(J_0^{-1}K_\pi)/H^2
 }.
 ```
 

@@ -115,7 +115,8 @@ async function settleArticle(page) {
   await page.waitForFunction(() => {
     const article = document.querySelector("article.markdown-body");
     return article && Array.from(article.querySelectorAll("math-renderer"))
-      .every((element) => element.querySelector("math") !== null);
+      .every((element) => element.querySelector("math, .flash-error, merror, [data-mjx-error], .katex-error") !== null
+        || element.matches(".flash-error, [data-mjx-error], .katex-error"));
   }, null, { timeout: 30000 });
   await page.evaluate(async () => {
     if (document.fonts) {

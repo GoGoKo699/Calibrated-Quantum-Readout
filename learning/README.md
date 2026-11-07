@@ -29,14 +29,14 @@ In general, if $`Q`$ projects onto the kernel, the allowed tangent condition is 
 
 ## Ten effects make one measurement
 
-A positive-operator-valued measure, or POVM, is a collection of positive effects $`E_z`$ summing to the identity. Its outcome probability is $`p_z=\operatorname{tr}(\rho E_z)`$. One measured specimen produces one label $`z`$. The qutrit construction has ten possible labels, assembled from two families.
+A positive-operator-valued measure, or POVM, is a collection of positive effects $`E_z`$ summing to the identity. Its outcome probability is $`p_z=\mathrm{tr}(\rho E_z)`$. One measured specimen produces one label $`z`$. The qutrit construction has ten possible labels, assembled from two families.
 
 The four support-pair effects are
 
 ```math
 G_\zeta=\frac14|\psi_\zeta\rangle\langle\psi_\zeta|,
 \qquad
-|\psi_\zeta\rangle=rac{|e_1\rangle+\zeta|e_2\rangle}{\sqrt2},
+|\psi_\zeta\rangle=\frac{|e_1\rangle+\zeta|e_2\rangle}{\sqrt2},
 \qquad \zeta\in\{1,-1,i,-i\}.
 ```
 
@@ -63,14 +63,14 @@ Each Fourier effect has probability $`1/12`$ at $`\rho_0`$, so the full record i
 
 ## How much information survives?
 
-With the apparatus fixed, the probability derivative in direction $`X`$ is $`\operatorname{tr}(XE_z)`$. Classical Fisher information measures the squared relative response of the outcome distribution:
+With the apparatus fixed, the probability derivative in direction $`X`$ is $`\mathrm{tr}(XE_z)`$. Classical Fisher information measures the squared relative response of the outcome distribution:
 
 ```math
 I_M(X,X)=\sum_z
-\frac{[\operatorname{tr}(XE_z)]^2}{p_z}.
+\frac{[\mathrm{tr}(XE_z)]^2}{p_z}.
 ```
 
-The quantum comparison scale is the symmetric logarithmic derivative, or SLD, metric. Solve $`2X=\rho L_X+L_X\rho`$ and set $`J_\rho(X,X)=\operatorname{tr}(\rho L_X^2)`$. This is the information available when a measurement can be optimized for one specified direction. A common measurement can face incompatible requirements from different directions. DDG20 [Sections 2.1–2.2](https://arxiv.org/html/2001.11742v2#S2.SS1) establish this statistical framework; the [notation translation](ANCHOR.md#notation-translation) identifies the symbols used here.
+The quantum comparison scale is the symmetric logarithmic derivative, or SLD, metric. Solve $`2X=\rho L_X+L_X\rho`$ and set $`J_\rho(X,X)=\mathrm{tr}(\rho L_X^2)`$. This is the information available when a measurement can be optimized for one specified direction. A common measurement can face incompatible requirements from different directions. DDG20 [Sections 2.1–2.2](https://arxiv.org/html/2001.11742v2#S2.SS1) establish this statistical framework; the [notation translation](ANCHOR.md#notation-translation) identifies the symbols used here.
 
 For the ten-effect qutrit POVM, both matrices are diagonal in the seven coordinates above:
 
@@ -125,8 +125,8 @@ Matrix inversion converts the measurement guarantee into
 ```math
 I_0^{-1}\preceq2rJ_0^{-1},
 \qquad
-\operatorname{tr}(WI_0^{-1})
-\le2r\operatorname{tr}(WJ_0^{-1})
+\mathrm{tr}(WI_0^{-1})
+\le2r\mathrm{tr}(WJ_0^{-1})
 ```
 
 for every positive semidefinite loss weight $`W`$. One measurement therefore supplies a simultaneous approximation guarantee for all quadratic costs. A cost chosen in advance can admit a better specialized measurement. Nuisance parameters must remain in the full information matrix before the relevant inverse block is taken; [M25](MILESTONES.md#m25) and [estimation](../science/estimation.md) make this distinction explicit.

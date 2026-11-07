@@ -30,7 +30,7 @@ For [M14](MILESTONES.md#m14)–[M24](MILESTONES.md#m24), the mathematical develo
 | $`F`$ | $`I_M`$ or $`I`$ | Classical Fisher matrix of the selected measurement |
 | $`F_Q`$ | $`J`$ | SLD quantum Fisher matrix, with the same normalization |
 | $`C`$ | $`W`$ | Positive semidefinite weight in quadratic estimation loss |
-| $`\Sigma`$ | $`\operatorname{Cov}(\widehat\theta)`$ or the stated MSE matrix | Estimation error matrix; the bias convention must be retained |
+| $`\Sigma`$ | $`\mathrm{Cov}(\widehat\theta)`$ or the stated MSE matrix | Estimation error matrix; the bias convention must be retained |
 | $`M_m`$ | $`E_z`$ | A POVM effect; $`m`$ and $`z`$ label outcomes |
 | $`\mathfrak p`$ | $`p`$ | Number of real parameters |
 | $`\widetilde{\boldsymbol\theta}`$ | $`\widehat\theta`$ | Generic estimator; here $`\widetilde\theta`$ is reserved for the pilot |

@@ -24,7 +24,7 @@ The real tangent space of the manifold of states of exact rank $`r`$ is
 
 ```math
 \mathcal T_\rho
-=\{X=X^\dagger:\operatorname{tr}X=0,\ QXQ=0\}.
+=\{X=X^\dagger:\mathrm{tr}\,X=0,\ QXQ=0\}.
 ```
 
 In the decomposition $`P\mathcal H\oplus Q\mathcal H`$, its elements have the form
@@ -36,7 +36,7 @@ A&B\\
 B^\dagger&0
 \end{pmatrix},
 \qquad
-A=A^\dagger,\quad \operatorname{tr}A=0.
+A=A^\dagger,\quad \mathrm{tr}\,A=0.
 ```
 
 For such a tangent, use the notation
@@ -61,7 +61,7 @@ J_\rho(X)
 \end{aligned}
 ```
 
-For example, this follows by solving $`X=(\rho L_X+L_X\rho)/2`$, choosing the kernel block of $`L_X`$ to be zero, and evaluating $`J_\rho(X)=\operatorname{tr}(\rho L_X^2)`$. The support–kernel SLD entry is $`2b_{ja}/\lambda_j`$; both conjugate entries are included in the displayed metric.
+For example, this follows by solving $`X=(\rho L_X+L_X\rho)/2`$, choosing the kernel block of $`L_X`$ to be zero, and evaluating $`J_\rho(X)=\mathrm{tr}(\rho L_X^2)`$. The support–kernel SLD entry is $`2b_{ja}/\lambda_j`$; both conjugate entries are included in the displayed metric.
 
 All effects below are chosen at this calibration state and then **held fixed when differentiating the outcome probabilities**. In particular, if $`\rho_\theta`$ is a smooth local model through $`\rho`$, derivatives act on $`\rho_\theta`$, not on the eigenvectors used to build the measurement.
 
@@ -109,7 +109,7 @@ F_{jt}
 =\frac{1}{rN}|v_{jt}\rangle\langle v_{jt}|.
 ```
 
-For fixed $`j`$, the effects $`|v_{jt}\rangle\langle v_{jt}|/N`$ form a pure-state Fisher-symmetric measurement on $`\operatorname{span}\{e_j\}\oplus Q\mathcal H`$, locally about $`|e_j\rangle`$. Pure-state Fisher-symmetric measurements are established in [Li16](../references/RELATED_WORK.md#li16). The factor $`1/r`$ allows these $`r`$ families to coexist in one complete measurement on $`\mathcal H`$.
+For fixed $`j`$, the effects $`|v_{jt}\rangle\langle v_{jt}|/N`$ form a pure-state Fisher-symmetric measurement on $`\mathrm{span}\{e_j\}\oplus Q\mathcal H`$, locally about $`|e_j\rangle`$. Pure-state Fisher-symmetric measurements are established in [Li16](../references/RELATED_WORK.md#li16). The factor $`1/r`$ allows these $`r`$ families to coexist in one complete measurement on $`\mathcal H`$.
 
 ## Completeness
 
@@ -168,10 +168,10 @@ This proves that the union of the two effect families is a POVM.
 At the calibration state,
 
 ```math
-\operatorname{tr}(\rho F_{jt})
+\mathrm{tr}(\rho F_{jt})
 =\frac{\lambda_j}{rN}>0,
 \qquad
-\operatorname{tr}(\rho G_{j\ell,\zeta})
+\mathrm{tr}(\rho G_{j\ell,\zeta})
 =\frac{\lambda_j+\lambda_\ell}{4r}>0.
 ```
 
@@ -192,9 +192,9 @@ This is the size of the displayed construction; no minimum-outcome claim is need
 For a tangent $`X`$, the derivative of a Fourier outcome probability is
 
 ```math
-\operatorname{tr}(XF_{jt})
+\mathrm{tr}(XF_{jt})
 =\frac1{rN}
-\left(x_j+2\operatorname{Re}
+\left(x_j+2\mathrm{Re}
 \sum_{a=1}^{k}\omega^{at}b_{ja}\right).
 ```
 
@@ -216,7 +216,7 @@ For the last identity, every frequency $`a+b`$ lies between $`2`$ and $`2k=N-1`$
 
 ```math
 \frac1N\sum_t
-\bigl(x_j+2\operatorname{Re}z_t\bigr)^2
+\bigl(x_j+2\mathrm{Re}\,z_t\bigr)^2
 =x_j^2+2\sum_a|b_{ja}|^2.
 ```
 
@@ -226,8 +226,8 @@ Hence the Fisher contribution of the $`j`$th Fourier family is exactly
 \begin{aligned}
 I_{F,j}(X)
 &=\sum_{t=0}^{N-1}
-\frac{\bigl[\operatorname{tr}(XF_{jt})\bigr]^2}
-{\operatorname{tr}(\rho F_{jt})}\\
+\frac{\bigl[\mathrm{tr}(XF_{jt})\bigr]^2}
+{\mathrm{tr}(\rho F_{jt})}\\
 &=\frac1{r\lambda_j}
 \left(x_j^2+2\sum_{a=1}^{k}|b_{ja}|^2\right).
 \end{aligned}
@@ -240,17 +240,17 @@ In particular, the phases cancel the Fisher cross terms between a diagonal varia
 For a fixed pair, write $`s=x_j+x_\ell`$ and $`z=x_{j\ell}`$. Then
 
 ```math
-\operatorname{tr}(XG_{j\ell,\zeta})
+\mathrm{tr}(XG_{j\ell,\zeta})
 =\frac1{2r}
-\left(\frac{s}{2}+\operatorname{Re}(\zeta z)\right).
+\left(\frac{s}{2}+\mathrm{Re}(\zeta z)\right).
 ```
 
 The four phases obey
 
 ```math
-\sum_\zeta \operatorname{Re}(\zeta z)=0,
+\sum_\zeta \mathrm{Re}(\zeta z)=0,
 \qquad
-\sum_\zeta [\operatorname{Re}(\zeta z)]^2=2|z|^2.
+\sum_\zeta [\mathrm{Re}(\zeta z)]^2=2|z|^2.
 ```
 
 Dividing the squared derivatives by the common outcome probability and summing yields
@@ -259,8 +259,8 @@ Dividing the squared derivatives by the common outcome probability and summing y
 \begin{aligned}
 I_{G,j\ell}(X)
 &=\sum_{\zeta}
-\frac{\bigl[\operatorname{tr}(XG_{j\ell,\zeta})\bigr]^2}
-{\operatorname{tr}(\rho G_{j\ell,\zeta})}\\
+\frac{\bigl[\mathrm{tr}(XG_{j\ell,\zeta})\bigr]^2}
+{\mathrm{tr}(\rho G_{j\ell,\zeta})}\\
 &=\frac{(x_j+x_\ell)^2+2|x_{j\ell}|^2}
 {r(\lambda_j+\lambda_\ell)}.
 \end{aligned}

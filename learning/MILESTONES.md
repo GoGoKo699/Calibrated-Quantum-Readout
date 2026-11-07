@@ -44,7 +44,7 @@ The [section map](ANCHOR.md#section-map) and [notation translation](ANCHOR.md#no
 **POVMs and probability records** · Background/preliminaries
 
 - **Central question:** How does a quantum measurement turn one specimen into a classical outcome?
-- **Understanding target:** Explain a POVM as positive effects that sum to the identity, with outcome probability $`p_z=\operatorname{tr}(\rho E_z)`$. Distinguish an effect from its probability and distinguish the number of possible labels from the number of specimens consumed.
+- **Understanding target:** Explain a POVM as positive effects that sum to the identity, with outcome probability $`p_z=\mathrm{tr}(\rho E_z)`$. Distinguish an effect from its probability and distinguish the number of possible labels from the number of specimens consumed.
 - **Dependencies and story role:** Uses [M01](#m01). Adds the operational object that will be optimized.
 - **Conceptual connection:** Completeness makes the outcome probabilities sum to one. General single-copy controls and an ancillary realization can be represented by the same POVM.
 - **Source pointers:** DDG20 [Section 1.2](https://arxiv.org/html/2001.11742v2#S1.SS2), Eq. (1); [Model: measurement resources](../science/model.md#3-measurement-resources-and-quantifiers); [Resources: accounting](../science/resources.md#resource-accounting).
@@ -54,7 +54,7 @@ The [section map](ANCHOR.md#section-map) and [notation translation](ANCHOR.md#no
 **Local changes with a fixed apparatus** · Background/preliminaries
 
 - **Central question:** What is held fixed when the sensitivity of a calibrated measurement is evaluated?
-- **Understanding target:** Interpret a tangent as the first derivative of a physical state curve through a nominal state. Explain why differentiating $`\operatorname{tr}(\rho_\theta E_z)`$ changes the state while leaving the selected effects fixed. Distinguish calibration from knowledge of the subsequent unknown perturbation.
+- **Understanding target:** Interpret a tangent as the first derivative of a physical state curve through a nominal state. Explain why differentiating $`\mathrm{tr}(\rho_\theta E_z)`$ changes the state while leaving the selected effects fixed. Distinguish calibration from knowledge of the subsequent unknown perturbation.
 - **Dependencies and story role:** Uses [M01](#m01) and [M02](#m02). Separates apparatus selection from the local experiment.
 - **Conceptual connection:** This distinction prevents information about the unknown parameter from entering through an illicit change of the measurement during differentiation.
 - **Source pointers:** DDG20 [Section 1.2](https://arxiv.org/html/2001.11742v2#S1.SS2); [Construction: fixed calibration](../science/construction.md#state-tangent-space-and-fixed-calibration); [Model: quantifiers](../science/model.md#3-measurement-resources-and-quantifiers).
@@ -114,7 +114,7 @@ The [section map](ANCHOR.md#section-map) and [notation translation](ANCHOR.md#no
 **Fixed-rank tangent geometry** · Background/preliminaries
 
 - **Central question:** Which infinitesimal changes preserve the rank while allowing the occupied support to move?
-- **Understanding target:** Explain the conditions $`X=X^\dagger`$, $`\operatorname{tr}X=0`$, and $`QXQ=0`$. Separate population changes, coherences within the support, and rotations from support into kernel. Explain why a zero first-order kernel block does not force the support to remain fixed.
+- **Understanding target:** Explain the conditions $`X=X^\dagger`$, $`\mathrm{tr}\,X=0`$, and $`QXQ=0`$. Separate population changes, coherences within the support, and rotations from support into kernel. Explain why a zero first-order kernel block does not force the support to remain fixed.
 - **Dependencies and story role:** Uses [M01](#m01), [M03](#m03), and [M07](#m07). Specifies the complete family of directions the measurement must protect.
 - **Conceptual connection:** Rank is preserved by curved state paths whose support rotates. This geometry introduces directions missed by tomography confined to the occupied subspace.
 - **Source pointers:** DDG20 [Section 3.1](https://arxiv.org/html/2001.11742v2#S3.SS1), as context for spectral and angular parameters; [Model: tangent space and physical paths](../science/model.md#1-states-and-local-perturbations); [Optimality: support rotations](../science/optimality.md#information-budget-for-support-rotations).
@@ -177,7 +177,7 @@ The [section map](ANCHOR.md#section-map) and [notation translation](ANCHOR.md#no
 **Rank-two qutrit as a physical model** · Narrative/innovation
 
 - **Central question:** What must a readout learn when two occupied levels can move inside a three-level system?
-- **Understanding target:** Resolve the seven local directions of $`\operatorname{diag}(p,1-p,0)`$ into one population, two occupied-coherence, and four support-motion directions. Explain why a small occupation changes the quantum information scale without changing the dimension of this fixed-rank tangent.
+- **Understanding target:** Resolve the seven local directions of $`\mathrm{diag}(p,1-p,0)`$ into one population, two occupied-coherence, and four support-motion directions. Explain why a small occupation changes the quantum information scale without changing the dimension of this fixed-rank tangent.
 - **Dependencies and story role:** Uses [M09](#m09) and [M12](#m12). Starts the narrative with the smallest mixed-state example before the general construction.
 - **Conceptual connection:** A single empty level already creates a measurement requirement absent from known-support qubit tomography.
 - **Source pointers:** DDG20 [Section 3.1](https://arxiv.org/html/2001.11742v2#S3.SS1), for the qubit comparison; [Example: seven local directions](../science/examples.md#1-seven-local-directions) and [information in each direction](../science/examples.md#3-information-in-each-direction).
