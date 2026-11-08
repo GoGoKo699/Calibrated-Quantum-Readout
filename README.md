@@ -38,7 +38,7 @@ Strong-eigenvector error can leak population into rare outcomes; a separate smal
 I_{\rm total}=I_Y+(N-m)\mathbb E_Y[I_{M_Y}].
 ```
 
-All pilot outcomes and settings count. The inherited support budget bounds the full-model worst fraction of every classically adaptive one-copy protocol by $`1/4`$. The sister project's [exact continuous-Haar pair readout](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/main/science/haar-pair-readout.md) has fraction strictly above $`1/4`$ for all sufficiently small positive $`b`$, tending to $`1/4`$ as $`b\downarrow0`$. This is a local full-model information separation. The continuous-Haar calculation does not set the finite Clifford constant or establish finite-sample risk dominance.
+All pilot outcomes and settings count. The inherited support budget bounds the full-model worst fraction of every classically adaptive one-copy protocol by $`1/4`$. The sister project's [exact continuous-Haar pair readout](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/c4356840cb334f93b3e8367870b79fee45f937c2/science/haar-pair-readout.md) has fraction strictly above $`1/4`$ for all sufficiently small positive $`b`$, tending to $`1/4`$ as $`b\downarrow0`$. This is a local full-model information separation. The continuous-Haar calculation does not set the finite Clifford constant or establish finite-sample risk dominance.
 
 The exact paid binomial pilot and geometric calibration lower bound are developed here; the exact Haar pair calculation has its authoritative home in the sister repository. No universal calibration-budget crossover is assumed or established.
 
