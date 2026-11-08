@@ -47,19 +47,23 @@ The report provides the remaining residuals and calibration fractions. Large abs
 
 The plot illustrates sensitivity of this specified readout to calibration error. It does not claim an optimal lower bound on the samples needed to calibrate an arbitrary measurement.
 
-## Hosted page captures
+## Hosted page verification
 
-The [verification workflow](../.github/workflows/verify.yml) runs the numerical checks and captures every tracked Markdown page from its exact GitHub commit. The [capture script](capture_github.cjs) uses anonymous Chromium at widths 1440 and 760 pixels. It saves the page HTML, full-page screenshots, and the rendered article DOM with the actual bounding rectangles of its elements. A manifest records the source revision, Git tree, page hashes, browser version, capture times, and artifact hashes.
+The [verification workflow](../.github/workflows/verify.yml) runs the numerical checks and verifies every tracked Markdown page from its exact GitHub commit. The [comparison collector](capture_hosted_math.cjs) uses anonymous Chromium at widths 1440 and 760 pixels. It compares every hosted mathematical expression with MathJax's source-derived MathML, preserving fractions, subscripts, superscripts, and table cells. The [source checker](check_rendered_math.py) also checks page identities, source hashes, expression counts, relations, labels, and renderer errors. Display geometry checks detect missing, overflowing, or collapsed equations.
 
-The workflow uses read-only repository access. Its `readout-hosted` artifact is retained for seven days. Captures can also be reproduced locally after installing Playwright 1.56.1 and its Chromium browser in a temporary dependency directory:
+The collector saves actual page HTML and screenshots, source inventories, captured MathML, per-viewport check results, and a hashed `hosted-report.json`. The workflow uses read-only repository access. Its `readout-hosted` artifact is retained for seven days; a transient artifact link is not permanent preservation.
+
+To reproduce the comparison, install Playwright 1.56.1, MathJax 3.2.1, and Chromium in a temporary dependency directory, then run:
 
 ```bash
 NODE_PATH=/absolute/temporary/dependencies/node_modules \
-node verification/capture_github.cjs \
+node verification/capture_hosted_math.cjs \
   --root "$PWD" \
   --repository GoGoKo699/Calibrated-Quantum-Readout \
   --revision "$(git rev-parse HEAD)" \
   --output /absolute/new-empty-capture-directory
 ```
 
-Capture success establishes that the pinned pages and their artifacts were collected. Comparing the captured mathematical structure with the source, and inspecting equation bodies, tables, navigation, and narrow-screen layout, are separate review steps. A screenshot or a successful numerical check alone does not establish that GitHub displayed every expression correctly.
+A passing report covers the captured revision and pages. Inspecting equation bodies, tables, navigation, and narrow-screen layout remains a separate visual review. The automated comparison does not establish scientific correctness, priority, arbitrary TeX equivalence, future host behavior, or other browsers.
+
+The earlier [raw capture script](capture_github.cjs) remains available when recorded DOM and measured element rectangles are useful for diagnostics. Its successful collection alone does not assert that source-to-host comparison passed.
