@@ -166,6 +166,12 @@ The curves evaluate the exact formula above. The [figure generator and direct-PO
 
 This calculation concerns the displayed miscalibrated readout, not an optimal lower bound on calibration sample complexity. For each fixed positive spectrum, its retained fraction tends continuously to the ideal value as the basis error vanishes. It explains the compatibility of a spectrum-independent exact-calibration theorem with a pilot analysis whose finite-sample constants depend on the operating state.
 
+## Strong and weak eigenvector errors
+
+The strong-leakage example above keeps the weak vector fixed. A different error rotates the weak vector into the kernel while leaving the strong vector fixed. Its two weak quadratures have distinct exact formulas and, for small fixed angles, a positive full-matrix limit as the weak occupation vanishes. Strong-state leakage does not describe this second geometry. [Paid calibration](paid-calibration.md#weak-eigenvector-error-has-a-different-limit) gives the formulas, the full seven-dimensional limit, and the large-angle failure boundary.
+
+The same page supplies [complete-record information](paid-calibration.md#model-and-complete-record-information), [scoped geometric calibration lower bounds](paid-calibration.md#geometric-calibration-requirements), and an [exact paid pilot](paid-calibration.md#an-exact-paid-real-angle-pilot). These distinguish the cost of recovering a basis, the information in the complete experiment, and the coherent pair-readout resource.
+
 ## Exact rank and neighboring statistical models
 
 The [fixed-rank tangent space](model.md) imposes $`QXQ=0`$ and allows arbitrary support–kernel rotations. That constraint is used in the Fourier Fisher calculation. The sharp theorem applies to regular local models staying on this rank stratum.

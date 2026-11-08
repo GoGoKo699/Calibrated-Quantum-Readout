@@ -9,6 +9,7 @@ Tested with Python **3.12.14**, NumPy **2.3.5**, and Matplotlib **3.10.8**. NumP
 ```bash
 python -m pip install -r verification/requirements.txt
 python verification/check_readout.py
+python verification/check_paid_calibration.py
 python verification/check_readout.py --output verification/results.json
 python verification/plot_calibration.py
 ```
@@ -40,6 +41,16 @@ The complete check passed. The largest residuals in the 21 construction cases we
 | Minimum normalized-Fisher eigenvalue error | $`1.47\times10^{-15}`$ | $`10^{-10}`$ |
 
 The report provides the remaining residuals and calibration fractions. Large absolute entries of $`J`$ arise when an occupied eigenvalue is small, so the identity check uses a relative matrix residual. The minimum-eigenvalue check uses a Cholesky congruence with the same eigenvalues as $`J^{-1/2}IJ^{-1/2}`$.
+
+## Paid calibration checks
+
+[check_paid_calibration.py](check_paid_calibration.py) constructs the ten effects through the existing calibrated readout, rotates their nominal basis, and evaluates all seven Born-rule derivatives directly. The analytical formulas are in [paid calibration](../science/paid-calibration.md), not inferred from the finite suite.
+
+The script checks both weak-angle quadratures, the strong-error real and imaginary invariant-block spectra, the exact-calibration full matrix, and the small-occupation weak-error full-matrix limit. It also enumerates every possible complete record for a two-copy pilot and two subsequent one-copy outcomes: 900 possible records per operating spectrum. The full seven-dimensional joint-score Fisher matrix is compared with the pilot matrix plus the expected conditional matrix. Some conditional settings have exactly dark outcomes; ordinary zero-score contributions are checked before numerical floating-point remnants are omitted. No successful-shot conditioning is used.
+
+The displayed pilot is orientation consistent: positive $`\widehat\alpha`$ selects $`\cos\widehat\alpha e_1+\sin\widehat\alpha f`$, corresponding to $`\delta=-\widehat\alpha`$ in the strong-error formula. A separate count enumeration checks the exact binomial mixture, including its even/odd fixed-pilot limits. A positive-definite IC pilot illustrates, without claiming optimality, the different strong and weak angular FI scales.
+
+The output is [paid-calibration-results.json](paid-calibration-results.json). Formula cases use $`b=10^{-10},10^{-6},0.01,0.3`$ and angles $`0,\pm0.01,\pm0.1,\pm0.4`$. Full-record cases use $`b=0.01,0.2`$. The checks use tolerances appropriate to the rare-event denominators; their results are finite diagnostics, not proofs of uniform calibration complexity, a Gaussian approximation, the two-copy separation, or finite-sample risk. The authoritative exact Haar calculation and its integral checks are in [Quantum Readout Rank Threshold](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/main/science/haar-pair-readout.md).
 
 ## Figure
 

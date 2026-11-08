@@ -28,6 +28,20 @@ I_M(X)
 
 exhibits the guarantee and its equality directions. The [matching converse](science/optimality.md) is the established support-rotation information budget of Zhou and Chen. The construction combines pure-state Fisher-symmetric measurements with occupied-pair measurements; the [attribution and comparison](references/RELATED_WORK.md) identify the inherited ingredients and the intermediate-rank attainment addressed here.
 
+## Paid calibration and two-copy readout
+
+[Quantum Readout Rank Threshold](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold) is the complementary sister project: it studies fixed readout without a supplied eigenbasis. The [paid-calibration account](science/paid-calibration.md) puts both experiments on one fully counted information budget, starting with $`\rho_b=\operatorname{diag}(1-b,b,0)`$.
+
+Strong-eigenvector error can leak population into rare outcomes; a separate small weak-eigenvector error has a different, uniformly robust limit. For a pilot record $`Y`$ from $`m`$ copies and a subsequent apparatus $`M_Y`$,
+
+```math
+I_{\rm total}=I_Y+(N-m)\mathbb E_Y[I_{M_Y}].
+```
+
+All pilot outcomes and settings count. The inherited support budget bounds the full-model worst fraction of every classically adaptive one-copy protocol by $`1/4`$. The sister project's [exact continuous-Haar pair readout](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/main/science/haar-pair-readout.md) has fraction strictly above $`1/4`$ for all sufficiently small positive $`b`$, tending to $`1/4`$ as $`b\downarrow0`$. This is a local full-model information separation. The continuous-Haar calculation does not set the finite Clifford constant or establish finite-sample risk dominance.
+
+The exact paid binomial pilot and geometric calibration lower bound are developed here; the exact Haar pair calculation has its authoritative home in the sister repository. No universal calibration-budget crossover is assumed or established.
+
 ## Scientific route
 
 Start with the [scientific overview](science/README.md), or go directly to the relevant question.
@@ -40,6 +54,7 @@ Start with the [scientific overview](science/README.md), or go directly to the r
 | What does this mean in the smallest mixed-state example? | [Rank-two qutrit](science/examples.md) |
 | How does the matrix bound become an estimation guarantee? | [Score estimation, pilot calibration, and costs](science/estimation.md) |
 | What calibration and hardware resources are assumed? | [Resources and sensitivity to basis error](science/resources.md) |
+| What changes near a shrinking occupied eigenvalue? | [Complete-record information, strong/weak errors, and paid calibration](science/paid-calibration.md) |
 | Which earlier results are used or compared? | [Related work](references/RELATED_WORK.md) and [bibliography](references/references.bib) |
 | How can the finite-dimensional calculations be reproduced? | [Verification guide](verification/README.md) |
 
@@ -66,10 +81,11 @@ With Python 3.12 and the pinned dependencies:
 ```bash
 python -m pip install -r verification/requirements.txt
 python verification/check_readout.py
+python verification/check_paid_calibration.py
 python verification/plot_calibration.py
 ```
 
-The checks compare direct Born-rule probabilities and derivatives with the full Fisher identity, the support-rotation trace budget, the qutrit matrices, exact score-estimator moments, and the calibration formula. The [verification guide](verification/README.md) describes the cases, tolerances, and limits of these numerical checks. The proofs establish the general result.
+The checks compare direct Born-rule probabilities and derivatives with the full Fisher identity, the support-rotation trace budget, the qutrit matrices, exact score-estimator moments, the calibration formulas, and an explicitly enumerated complete adaptive record. The [verification guide](verification/README.md) describes the cases, tolerances, and limits of these numerical checks. The proofs establish the general result.
 
 ## Purpose and contact
 

@@ -119,6 +119,16 @@ For a differentiable estimable functional $`g(\theta)`$ with Jacobian $`G`$ at t
 
 The common measurement is therefore valid for every such loss or restriction of the model. It need not minimize the cost of an individual restricted problem; for example, a single-parameter model has its own SLD-optimal readout.
 
+## Complete-record and shrinking-spectrum comparisons
+
+The pilot implementation below fixes the true state and a local positive spectral floor. For a family whose occupied eigenvalue shrinks, use the exact experiment identity
+
+```math
+I_{\rm total}=I_Y+(N-m)\mathbb E_Y[I_{M_Y}(\rho)].
+```
+
+Here $`Y`$ includes the complete pilot record, and the conditional apparatus is fixed during differentiation. The [paid-calibration account](paid-calibration.md) derives this identity, evaluates a finite binomial pilot, analyzes the different strong/weak eigenvector errors, and proves the adaptive one-copy information ceiling. Its geometric calibration obstruction does not imply a universal total-FI threshold. Efficient information for unknown nuisance coordinates is obtained from the full summed matrix as above, not by averaging conditional Schur complements.
+
 ## Learning the calibration with a pilot sample
 
 A precise pointwise asymptotic implementation can be given without requiring nondegenerate occupied eigenvalues. The following conditions specify the statistical scope of this implementation.

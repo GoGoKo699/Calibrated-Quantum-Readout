@@ -27,6 +27,7 @@ jobs:
         run: |
           python3 -m pip install -r verification/requirements.txt
           python3 verification/check_readout.py
+          python3 verification/check_paid_calibration.py
 
       - name: Install the browser in temporary storage
         run: |
