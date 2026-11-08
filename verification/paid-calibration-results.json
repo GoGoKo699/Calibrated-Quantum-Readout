@@ -1,0 +1,81 @@
+{
+  "formula_checks": {
+    "cases": 28,
+    "max_residual": 2.220446049250313e-16,
+    "exact_calibration_matrices": 3,
+    "weak_error_limit_checks": [
+      {
+        "delta": -0.4,
+        "b": 1e-10,
+        "limit_eigenvalue_residual": 1.2865153387053851e-11
+      },
+      {
+        "delta": -0.1,
+        "b": 1e-10,
+        "limit_eigenvalue_residual": 2.483513394935244e-12
+      },
+      {
+        "delta": 0.1,
+        "b": 1e-10,
+        "limit_eigenvalue_residual": 2.4834578837840127e-12
+      },
+      {
+        "delta": 0.4,
+        "b": 1e-10,
+        "limit_eigenvalue_residual": 1.2865056242539197e-11
+      }
+    ]
+  },
+  "transcript_checks": [
+    {
+      "b": 0.01,
+      "m": 2,
+      "n": 2,
+      "enumerated_possible_records": 900,
+      "chain_matrix_max_residual": 9.947598300641403e-13,
+      "probability_mass": 1.0000000000000056
+    },
+    {
+      "b": 0.2,
+      "m": 2,
+      "n": 2,
+      "enumerated_possible_records": 900,
+      "chain_matrix_max_residual": 7.283063041541027e-14,
+      "probability_mass": 1.0000000000000027
+    }
+  ],
+  "pilot_mixture": {
+    "mixture_checks": [
+      {
+        "b": 0.01,
+        "m": 2,
+        "direct_vs_binomial_residual": 2.7755575615628914e-17
+      },
+      {
+        "b": 0.2,
+        "m": 2,
+        "direct_vs_binomial_residual": 1.1102230246251565e-16
+      }
+    ],
+    "even_m4_limit": 0.09375,
+    "evaluated_even_m4": 0.0937500000014375,
+    "evaluated_odd_m3": 6.874999999764001e-12
+  },
+  "pd_pilot": [
+    {
+      "b": 0.01,
+      "strong_angular_FI": 0.45191930835734856,
+      "weak_angular_FI_over_b_squared": 3.018867924528301
+    },
+    {
+      "b": 0.0001,
+      "strong_angular_FI": 0.45709061233820036,
+      "weak_angular_FI_over_b_squared": 3.1980811513092138
+    },
+    {
+      "b": 1e-06,
+      "strong_angular_FI": 0.45714233469388665,
+      "weak_angular_FI_over_b_squared": 3.1999808001151986
+    }
+  ]
+}

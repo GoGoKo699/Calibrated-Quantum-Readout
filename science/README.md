@@ -22,6 +22,7 @@ Adding empty dimensions increases the number of outcomes needed by this construc
 | [Examples](examples.md) | Work through ten effects and seven tangent coordinates for a rank-two qutrit. |
 | [Estimation](estimation.md) | Build the local score estimator, account for pilot calibration, and derive weighted-risk comparisons. |
 | [Resources](resources.md) | Separate physical readout control from calibration and statistical model inputs. |
+| [Paid calibration](paid-calibration.md) | Compare strong/weak errors, complete adaptive records, and a fixed two-copy readout near a rank boundary. |
 
 The [qutrit example](examples.md) illustrates a consequential model distinction. Within a known two-dimensional support, a qubit readout can retain one third of the SLD information in every direction. Allowing that support to move into an empty third level enlarges the local model and lowers the sharp common fraction to one quarter. The occupied spectrum can remain unchanged throughout this comparison.
 
@@ -30,6 +31,14 @@ The [qutrit example](examples.md) illustrates a consequential model distinction.
 The POVM is built in an eigenbasis of the nominal state and frozen when the probabilities are differentiated. Its coefficients require no occupied-eigenvalue values. The statistical estimator still needs nominal probabilities and model derivatives; a pilot can supply an estimated local operating point.
 
 The [pilot argument](estimation.md#learning-the-calibration-with-a-pilot-sample) is pointwise at a fixed state with its positive spectrum bounded away from zero locally. It permits degenerate occupied eigenvalues because it never differentiates the selected eigenbasis. The [calibration calculation](resources.md#calibration-sensitivity-for-a-weakly-occupied-direction) shows why the finite-sample constants cannot be read off from the rank alone: a small basis error can leak a strongly occupied component into an outcome intended to resolve a much weaker one.
+
+## Complete records near a shrinking occupied eigenvalue
+
+The [paid-calibration account](paid-calibration.md) replaces an uncharged basis-error estimate by its full statistical experiment. With all copies counted, its Fisher matrix is the pilot matrix plus the expected conditional second-stage matrix. The strong and weak occupied eigenvectors have different sensitivity to misalignment; nuisance coupling also prevents a scalar target fraction from certifying a full-matrix guarantee.
+
+The account proves a necessary $`mb\to\infty`$ condition for explicitly stated geometric calibration-consistency tasks and evaluates one paid real-angle pilot exactly. Neither statement is a universal total-information crossover. The same conditional information budget bounds the full-model fraction of every adaptive one-copy protocol by $`1/4`$.
+
+[Quantum Readout Rank Threshold](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold) studies the complementary coherent resource. Its [exact Haar pair calculation](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/c4356840cb334f93b3e8367870b79fee45f937c2/science/haar-pair-readout.md) gives a state-independent readout with a strictly higher full-model minimum fraction for sufficiently small positive $`b`$. Both experiments use ordinary local FI on the rank-two tangent stratum, with every copy counted. This comparison does not identify a finite-sample risk ordering or a sharp finite-design constant.
 
 ## Attribution and verification
 

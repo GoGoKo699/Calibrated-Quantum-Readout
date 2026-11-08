@@ -2,7 +2,7 @@
 
 A source produces a state near a calibrated operating point. One measurement must retain useful information about every allowed small change of that state. These thirty milestones connect the physical setting, the finite measurement construction, its sharp information bound, and its estimation consequences.
 
-The map has **12 background/preliminary milestones and 18 narrative/innovation milestones**. The background develops the objects needed to state the optimization precisely: states, measurements, local statistical information, the quantum metric, and allowed perturbations. The longer narrative follows the two measurement families through completeness and Fisher information, combines them with the converse, and establishes what the result means for calibration and estimation. This allocation reflects a project built around one exact construction and its consequences.
+The map has **12 background/preliminary milestones and 18 narrative/innovation milestones**. The background develops the objects needed to state the optimization precisely: states, measurements, local statistical information, the quantum metric, and allowed perturbations. The longer narrative follows the two measurement families through completeness and Fisher information, combines them with the converse, and connects its calibrated optimum with complete-record calibration and coherent readout. This allocation reflects the construction, its sharp budget, and the statistical consequences of paying to learn its basis.
 
 Both phases move from local objects to an integrated account. [M12](#m12) assembles the complete design problem. [M30](#m30) assembles the theorem, its mechanism, the resources it uses, and its boundaries. Detailed derivations remain in the authoritative [scientific account](../science/README.md).
 
@@ -167,9 +167,9 @@ The [section map](ANCHOR.md#section-map) and [notation translation](ANCHOR.md#no
 | [M24](#m24) | How model restrictions change the optimum |
 | [M25](#m25) | A score estimator for every quadratic cost |
 | [M26](#m26) | Learning calibration without an eigenbasis limit |
-| [M27](#m27) | Rare directions and calibration error |
-| [M28](#m28) | Individual versus collective local costs |
-| [M29](#m29) | Attribution and verification of the contribution |
+| [M27](#m27) | Strong and weak eigenvector errors |
+| [M28](#m28) | Paid calibration as a statistical experiment |
+| [M29](#m29) | Adaptive ceilings and coherent readout |
 | [M30](#m30) | Synthesis: rank, calibration, and accessible information |
 
 ### M13
@@ -297,57 +297,57 @@ The [section map](ANCHOR.md#section-map) and [notation translation](ANCHOR.md#no
 **A score estimator for every quadratic cost** · Narrative/innovation
 
 - **Central question:** How does the Fisher guarantee become an attained local covariance statement?
-- **Understanding target:** Explain how averaging nominal scores and multiplying by the inverse Fisher matrix gives an exactly locally unbiased estimator with covariance $`I^{-1}/n`$. Use inverse matrix order to obtain the common factor-$`2r`$ bound for any positive semidefinite weight, including functionals and unknown nuisance coordinates. Distinguish this guarantee from separate optimality for each loss.
+- **Understanding target:** Explain how averaging nominal scores and multiplying by the inverse Fisher matrix gives an exactly locally unbiased estimator with covariance $`I^{-1}/n`$. Use inverse matrix order to obtain the common factor-$`2r`$ bound for any positive semidefinite weight, including functionals and unknown nuisance coordinates. Distinguish this guarantee from separate optimality for each loss and from the sharpness of an actual individual-versus-collective risk ratio.
 - **Dependencies and story role:** Uses [M04](#m04), [M06](#m06), [M10](#m10), [M17](#m17), and [M20](#m20). Gives the information theorem an explicit estimation implementation.
 - **Conceptual connection:** The classical score construction is established machinery; the new readout supplies its controlled Fisher matrix. Retaining nuisance parameters in the full inverse preserves the intended statistical task.
-- **Source pointers:** DDG20 [Section 2.1](https://arxiv.org/html/2001.11742v2#S2.SS1), Eq. (9), [Section 2.7](https://arxiv.org/html/2001.11742v2#S2.SS7), and [Section 2.12](https://arxiv.org/html/2001.11742v2#S2.SS12); [Estimation: exact score estimator](../science/estimation.md#exact-local-score-estimator-at-a-known-nominal-point) and [weighted losses](../science/estimation.md#weighted-losses-functionals-and-nuisance-parameters).
+- **Source pointers:** DDG20 [Section 2.1](https://arxiv.org/html/2001.11742v2#S2.SS1), Eq. (9), [Section 2.7](https://arxiv.org/html/2001.11742v2#S2.SS7), and [Section 2.12](https://arxiv.org/html/2001.11742v2#S2.SS12); [Estimation: exact score estimator](../science/estimation.md#exact-local-score-estimator-at-a-known-nominal-point) and [weighted losses](../science/estimation.md#weighted-losses-functionals-and-nuisance-parameters), and [individual/collective costs](../science/estimation.md#individual-and-collective-cost-comparison).
 
 ### M26
 
 **Learning calibration without an eigenbasis limit** · Narrative/innovation
 
 - **Central question:** Can a pilot estimate select a useful apparatus when positive eigenvalues are degenerate?
-- **Understanding target:** Explain the two-stage protocol with all pilot copies counted. Condition on the pilot so the second-stage effects are fixed, and connect uniform probability and inverse-Fisher bounds to the one-step risk estimate. Identify the fourth-moment requirement, the choice $`1/2\lt\alpha\lt1`$ for a pilot of size $`n^\alpha`$, and the fixed-state spectral conditions.
+- **Understanding target:** Explain the two-stage protocol with all pilot copies counted. Condition on the pilot so the second-stage effects are fixed, and connect uniform probability and inverse-Fisher bounds to the one-step risk estimate. Derive the complete-record identity by conditioning on the pilot, keeping it separate from the pointwise risk proof. Identify the fourth-moment requirement, the choice $`1/2\lt\alpha\lt1`$ for a pilot of size $`n^\alpha`$, and the fixed-state spectral conditions.
 - **Dependencies and story role:** Uses [M11](#m11), [M17](#m17), and [M25](#m25). Replaces supplied calibration by a justified pointwise implementation.
 - **Conceptual connection:** The proof differentiates the state model while keeping the realized apparatus fixed. Uniform conditional bounds permit arbitrary measurable eigenbasis choices at degeneracy and establish local risk control without asserting a limiting estimator distribution.
-- **Source pointers:** DDG20 [Section 4.5](https://arxiv.org/html/2001.11742v2#S4.SS5), for localization context, with the scope limit in [Section 4.6.3](https://arxiv.org/html/2001.11742v2#S4.SS6.SSS3); [Estimation: pilot argument](../science/estimation.md#learning-the-calibration-with-a-pilot-sample) and [degenerate eigenvalues](../science/estimation.md#degenerate-positive-eigenvalues). The fixed-rank proof is supplied locally.
+- **Source pointers:** DDG20 [Section 4.5](https://arxiv.org/html/2001.11742v2#S4.SS5), for localization context, with the scope limit in [Section 4.6.3](https://arxiv.org/html/2001.11742v2#S4.SS6.SSS3); [Estimation: pilot argument](../science/estimation.md#learning-the-calibration-with-a-pilot-sample) and [degenerate eigenvalues](../science/estimation.md#degenerate-positive-eigenvalues); [Complete-record information](../science/paid-calibration.md#model-and-complete-record-information). The fixed-rank proof is supplied locally.
 
 ### M27
 
-**Rare directions and calibration error** · Narrative/innovation
+**Strong and weak eigenvector errors** · Narrative/innovation
 
-- **Central question:** Why can a small basis error spoil a guarantee that is independent of the nominal spectrum?
-- **Understanding target:** Follow the stated error that rotates a strongly occupied vector toward the kernel. Explain how background of order $`\Lambda\delta^2`$ enters outcomes intended to resolve a weak occupation $`\varepsilon`$, and identify $`\Lambda\delta^2/\varepsilon`$ as the relevant leakage ratio. Keep this readout calculation separate from a lower bound on calibration sample complexity.
-- **Dependencies and story role:** Uses [M04](#m04), [M13](#m13), [M17](#m17), and [M26](#m26). Exposes the material limitation of exact calibration.
-- **Conceptual connection:** Spectrum-independent measurement coefficients do not make the apparatus insensitive to eigenvector error. Rare-outcome information and finite calibration accuracy interact.
-- **Source pointers:** DDG20 [Section 4.5](https://arxiv.org/html/2001.11742v2#S4.SS5), for local applicability context; [Resources: exact calibration-error calculation](../science/resources.md#calibration-sensitivity-for-a-weakly-occupied-direction); [Example: calibration and verification](../science/examples.md#5-calibration-and-verification).
+- **Central question:** Why do two small basis errors have different effects near a vanishing occupied eigenvalue?
+- **Understanding target:** Explain how strong-to-kernel misalignment introduces background of order $`\delta^2`$ into weak outcomes of order $`b`$. Contrast its collapsing weak fraction and nuisance-coupled matrix block with a separate weak-to-kernel error, whose small-angle full-matrix limit remains positive. Identify the two weak quadratures and the large-angle failure boundary.
+- **Dependencies and story role:** Uses [M04](#m04), [M09](#m09), [M13](#m13), [M17](#m17), and [M26](#m26). Resolves what a statement about “basis error” must specify before paying for calibration.
+- **Conceptual connection:** A spectral condition number enters through strong population leaking into a rare channel, rather than through every eigenvector error. A scalar target diagonal is not a simultaneous or nuisance-adjusted guarantee.
+- **Source pointers:** DDG20 [Section 2.7](https://arxiv.org/html/2001.11742v2#S2.SS7) and [Section 4.5](https://arxiv.org/html/2001.11742v2#S4.SS5); [Strong-error matrix block](../science/paid-calibration.md#strong-eigenvector-error-and-nuisance-coupling); [Weak-error limit](../science/paid-calibration.md#weak-eigenvector-error-has-a-different-limit); [General-rank leakage example](../science/resources.md#calibration-sensitivity-for-a-weakly-occupied-direction).
 
 ### M28
 
-**Individual versus collective local costs** · Narrative/innovation
+**Paid calibration as a statistical experiment** · Narrative/innovation
 
-- **Central question:** What does the sharp Fisher fraction imply about the actual benefit of collective measurements?
-- **Understanding target:** Explain the local asymptotic minimax risk convention and the inequalities relating individual, collective, and SLD costs. Connect the individual upper bound to the score estimator and the collective lower bound to a local Bayesian Cramér–Rao argument. Distinguish the sharp Fisher constant from the upper factor $`2r`$ for true costs and from the attributed known-support advantage $`r+1`$.
-- **Dependencies and story role:** Uses [M08](#m08), [M11](#m11), [M23](#m23), [M25](#m25), and [M26](#m26). Integrates the readout theorem with the broader multiparameter estimation problem.
-- **Conceptual connection:** A universal covariance guarantee gives a controlled individual strategy, while a lower bound on every collective strategy supplies the comparison. These two optimizations need not have the same sharp constant.
-- **Source pointers:** DDG20 [Section 2.10](https://arxiv.org/html/2001.11742v2#S2.SS10), [Section 4.6.4](https://arxiv.org/html/2001.11742v2#S4.SS6.SSS4), and [Section 5.5](https://arxiv.org/html/2001.11742v2#S5.SS5); [Estimation: cost comparison](../science/estimation.md#individual-and-collective-cost-comparison) and its final known-support example; [Das25](../references/RELATED_WORK.md#das25).
+- **Central question:** What must be specified to turn calibration accuracy into a fully counted information comparison?
+- **Understanding target:** Distinguish geometric basis consistency, complete-record FI and estimation risk. Explain the two-point fidelity obstruction for strong error $`o(\sqrt b)`$ or weak error $`o(1)`$, with the scope of the necessary condition $`mb\to\infty`$. Evaluate the exact binomial-mixture pilot conceptually: average conditional information and retain its tie events, rather than insert an MSE into a nonlinear reciprocal.
+- **Dependencies and story role:** Uses [M11](#m11), [M25](#m25), [M26](#m26), and [M27](#m27). Replaces an uncharged deterministic error by an inspectable statistical experiment.
+- **Conceptual connection:** All pilot outcomes can carry information, while their distribution selects the later readout. The probability of unusually accurate calibration can change expected FI without implying high-probability information or low finite-sample risk.
+- **Source pointers:** DDG20 [Sections 2.1–2.2](https://arxiv.org/html/2001.11742v2#S2.SS1), [4.5](https://arxiv.org/html/2001.11742v2#S4.SS5), and [5.5](https://arxiv.org/html/2001.11742v2#S5.SS5); [Geometric calibration requirements](../science/paid-calibration.md#geometric-calibration-requirements); [Exact paid pilot](../science/paid-calibration.md#an-exact-paid-real-angle-pilot).
 
 ### M29
 
-**Attribution and verification of the contribution** · Narrative/innovation
+**Adaptive ceilings and coherent readout** · Narrative/innovation
 
-- **Central question:** Which parts of the result are inherited, which are established by the assembled construction, and what do finite checks verify?
-- **Understanding target:** Identify the pure-state, pair-readout, refined-converse, and local-estimation inputs. State the specific all-spectrum calibrated attainment supplied by their assembly. Compare its quantifiers and loss with state-independent randomized readout and global tomography. Explain what direct POVM and Fisher calculations check without treating a finite suite as the universal proof.
-- **Dependencies and story role:** Uses [M20](#m20), [M22](#m22), [M23](#m23), [M27](#m27), and [M28](#m28). Places the complete result within its evidence and prior-work context.
-- **Conceptual connection:** Scientific attribution and reproduction depend on identifying the exact question, assumptions, and output of each result. Similar rank scaling does not by itself identify the same theorem.
-- **Source pointers:** DDG20 [Section 1.3](https://arxiv.org/html/2001.11742v2#S1.SS3), for the distinction among estimation approaches; [Related work](../references/RELATED_WORK.md), especially Li16, Pereira20, ZC26, and NZ26; [Verification guide](../verification/README.md); [Scientific overview: attribution](../science/README.md#attribution-and-verification).
+- **Central question:** What changes if the same total number of specimens is measured in coherent pairs rather than separately after calibration?
+- **Understanding target:** Apply the support-information budget conditionally along an adaptive transcript to obtain the full-model one-copy ceiling $`1/4`$. Compare it with the sister project's fixed finite-design certificate and exact continuous-Haar pair result, with every copy counted. Explain the strict near-boundary separation in minimum FI fraction while retaining its implementation and risk limits. Attribute the inherited budget, chain rule, pure-state ingredients and earlier qubit coherent advantage.
+- **Dependencies and story role:** Uses [M08](#m08), [M22](#m22), [M23](#m23), and [M26](#m26)–[M28](#m28). Places paid calibration and coherent access in one operational comparison.
+- **Conceptual connection:** Adaptation changes the chosen one-copy POVM but cannot evade its conditional support budget. Coherent pair readout changes the measurement class. A conservative lower certificate, an exact protocol fraction and a risk optimum are distinct claims.
+- **Source pointers:** DDG20 [Section 2.10](https://arxiv.org/html/2001.11742v2#S2.SS10) and [Section 2.11](https://arxiv.org/html/2001.11742v2#S2.SS11); [Adaptive ceiling and pair comparison](../science/paid-calibration.md#adaptive-ceiling-and-two-copy-comparison); [Exact sister Haar proof](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/c4356840cb334f93b3e8367870b79fee45f937c2/science/haar-pair-readout.md); [Related work](../references/RELATED_WORK.md); [Verification guide](../verification/README.md).
 
 ### M30
 
 **Synthesis: rank, calibration, and accessible information** · Narrative/innovation
 
-- **Central question:** What can one calibrated single-copy apparatus establish about every small fixed-rank change of a quantum state?
-- **Understanding target:** Give one connected account of the allowed tangent model, the two measurement families and their shared completeness budget, the exact fraction $`1/(2r)`$, and the matching support-rotation converse. Relate the finite outcome count and common cost guarantee to the required calibration, the conditional pilot result, and the separate collective-cost question.
+- **Central question:** How do the calibrated rank law, paid calibration and coherent readout fit into one scientific account?
+- **Understanding target:** Connect the allowed tangent model, the two effect families, the exact fraction $`1/(2r)`$ and the matching support budget. Explain why the qutrit's strong and weak errors differ, how complete records pay for calibration, and what the two-copy comparison establishes. Separate the local FI criterion, geometric consistency, statistical risk and efficient implementation; give the proof and verification route for each actual claim.
 - **Dependencies and story role:** Integrates [M12](#m12), [M23](#m23), and [M24](#m24)–[M29](#m29). Completes the narrative at the level of the whole scientific contribution.
-- **Conceptual connection:** Rank controls how the occupied vectors share access to kernel directions. Calibration makes the attainable fraction spectrum-independent at the operating point, while model restrictions and finite calibration accuracy determine the boundaries of that conclusion.
-- **Source pointers:** DDG20 [Section 1.2](https://arxiv.org/html/2001.11742v2#S1.SS2) and [Section 2.11](https://arxiv.org/html/2001.11742v2#S2.SS11), for the overall estimation and attainment framework; [Scientific overview](../science/README.md); [Model: theorem and scope](../science/model.md#4-exact-rank-law); [Estimation](../science/estimation.md); [Resources](../science/resources.md).
+- **Conceptual connection:** Rank controls how occupied vectors share the kernel-information budget. Exact calibration attains that budget pointwise; paying to learn a basis and allowing coherent pairs change different resources. Their comparison does not require a universal calibration-budget crossover law.
+- **Source pointers:** DDG20 [Section 1.2](https://arxiv.org/html/2001.11742v2#S1.SS2), [Section 2.11](https://arxiv.org/html/2001.11742v2#S2.SS11), and [Section 4.5](https://arxiv.org/html/2001.11742v2#S4.SS5); [Scientific overview](../science/README.md); [Model](../science/model.md); [Estimation](../science/estimation.md); [Paid calibration](../science/paid-calibration.md); [Research attribution](../references/RELATED_WORK.md).

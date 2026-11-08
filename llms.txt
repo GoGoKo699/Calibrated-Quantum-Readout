@@ -11,6 +11,7 @@
 - [Examples](science/examples.md): rank-two qutrit matrices, ten outcomes, achieved cost, and fixed-support comparison.
 - [Estimation](science/estimation.md): exact nominal score estimator, nuisance parameters, pilot conditions, local asymptotic risk, and individual/collective costs.
 - [Resources](science/resources.md): measurement settings, statistical inputs, all-copy accounting, implementation scope, and calibration sensitivity.
+- [Paid calibration](science/paid-calibration.md): complete-record Fisher identity, strong/weak eigenvector errors, geometric consistency, exact binomial pilot and adaptive ceiling; the exact Haar pair proof is owned by Quantum-Readout-Rank-Threshold.
 - [Related work](references/RELATED_WORK.md): theorem-level comparisons, precise inherited ingredients, source identities, and access limits.
 - [Bibliography](references/references.bib): machine-readable references.
 - [Verification](verification/README.md): runnable checks, environments, recorded outputs, and figure generation.
@@ -25,4 +26,8 @@ For a first encounter, read the bridge and map. For a proof, use the scientific 
 
 ## Interpretation boundaries
 
-Keep the measurement frozen when differentiating. The design requires an occupied eigenbasis and rank, but no occupied eigenvalue values. Estimation additionally uses likelihood probabilities and model derivatives. Equality of the design optimum applies to the full fixed-rank tangent; restricted submodels inherit a lower guarantee and can have better optima. The exact Fisher fraction does not establish an exact collective-cost advantage of 2r. Calibration is pointwise at a fixed positive spectrum, with no uniform finite-sample or efficient local-circuit claim. Use the cited primary sources for attribution; the numerical checks do not establish priority.
+Keep the measurement frozen when differentiating. The design requires an occupied eigenbasis and rank, but no occupied eigenvalue values. Estimation additionally uses likelihood probabilities and model derivatives. Equality of the design optimum applies to the full fixed-rank tangent; restricted submodels inherit a lower guarantee and can have better optima. The exact Fisher fraction does not establish an exact collective-cost advantage of 2r. The estimation pilot is pointwise at a fixed positive spectrum. The paid-calibration analysis separately treats shrinking occupations, with no universal crossover or efficient local-circuit claim. Compare full-model minimum FI fractions and all consumed copies; do not infer matrix dominance over every specialized submodel or finite-sample risk dominance. Use the cited primary sources for attribution; the numerical checks do not establish priority.
+
+## Sister source
+
+Quantum-Readout-Rank-Threshold: https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold . It owns the fixed two-copy theorem and exact continuous-Haar pair comparison; this repository owns the paid-pilot and strong/weak calibration analysis.

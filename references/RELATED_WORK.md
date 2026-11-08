@@ -1,6 +1,6 @@
 # Related work and attribution
 
-This account compares the calibrated local measurement problem with the primary sources inspected as of 7 November 2026. Citation keys match [references.bib](references.bib). Versioned preprint links identify the texts used for equation and theorem numbers.
+This account compares the calibrated local measurement problem with the primary sources inspected as of 8 November 2026. Citation keys match [references.bib](references.bib). Versioned preprint links identify the texts used for equation and theorem numbers.
 
 ## The exact problem being compared
 
@@ -71,7 +71,7 @@ where one measurement may act on at most $`t`$ copies. Their lower bound allows 
 
 ## Relation to Quantum-Readout-Rank-Threshold
 
-The internal comparator [RankThreshold26] was inspected at commit `b73e3b5eab18a11ddfe5e992b45412c9567a61af`, specifically its README, `science/model.md`, `science/interpretation.md`, and `references/RELATED_WORK.md`.
+The fixed-apparatus account [RankThreshold26] was inspected at commit `61289b55a495d72f2ae15458e2f33682cb197ce9`, specifically its README, `science/model.md`, `science/interpretation.md`, and `references/RELATED_WORK.md`.
 
 | Assumption | Quantum-Readout-Rank-Threshold | Calibrated-Quantum-Readout |
 |---|---|---|
@@ -82,7 +82,15 @@ The internal comparator [RankThreshold26] was inspected at commit `b73e3b5eab18a
 
 The fixed-apparatus obstruction and the calibrated theorem have different quantifiers. The calibrated result does not invalidate the obstruction, and it does not supply the uniform localization cost that would connect their operational models.
 
-Pinned sources: [model](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/b73e3b5eab18a11ddfe5e992b45412c9567a61af/science/model.md), [interpretation](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/b73e3b5eab18a11ddfe5e992b45412c9567a61af/science/interpretation.md), and [related work](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/b73e3b5eab18a11ddfe5e992b45412c9567a61af/references/RELATED_WORK.md).
+Pinned sources: [model](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/61289b55a495d72f2ae15458e2f33682cb197ce9/science/model.md), [interpretation](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/61289b55a495d72f2ae15458e2f33682cb197ce9/science/interpretation.md), and [related work](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/61289b55a495d72f2ae15458e2f33682cb197ce9/references/RELATED_WORK.md).
+
+## Paid calibration and the coherent comparison
+
+The [paid-calibration account](../science/paid-calibration.md) supplies an explicit bridge between the calibrated and fixed-apparatus experiments. Its complete-record Fisher identity is standard statistical machinery: [NZ26, Section 4.3, Lemma 4.6](#nz26) states the adaptive matrix chain rule. Combining that rule with the inherited [ZC26](#zc26) support budget gives the adaptive one-copy ceiling; it is a corollary, not a new budget theorem. [BNG00](#bng00), Sections 2–4, already explains fixed-model two-stage adaptive attainability and vector-parameter complications. Those arguments do not provide a uniform shrinking-spectrum calibration cost.
+
+The new qutrit calculations distinguish strong and weak occupied-to-empty eigenvector errors on the full tangent, state a quantum two-point obstruction for specified geometric consistency tasks, and evaluate an exact paid binomial pilot. These refine the resource account rather than deriving a universal calibration-budget crossover. The pointwise lattice atoms and the distinction between FI, inverse FI and risk are essential limits on that inference. [Mahler13](#mahler13) establishes adaptive infidelity improvements for a different statistical loss; it does not imply the total-record FI law considered here.
+
+The exact continuous-Haar parity-pair calculation has its authoritative home in [Quantum Readout Rank Threshold](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/c4356840cb334f93b3e8367870b79fee45f937c2/science/haar-pair-readout.md). It uses inherited parity, Haar and pure-state ingredients to establish a strict near-boundary separation in the **full-model minimum FI fraction** from every adaptive one-copy protocol. [ZH18](#zh18) already establishes two-copy qubit information advantages, including its Eq. (13). A moving rank-two qutrit support has additional tangent directions; the weak occupied-to-empty class controls the comparison here. The exact Haar apparatus is distinct from the sister project's finite-design certificate. Neither the numerical checks nor this comparison establishes exhaustive historical priority, an optimal two-copy constant, or finite-sample risk dominance.
 
 ## Older optimal-design coverage and access limitation
 
@@ -158,4 +166,16 @@ H. Zhu, *Quantum State Estimation and Symmetric Informationally Complete POMs*, 
 
 ### RankThreshold26
 
-GoGoKo699, *Quantum-Readout-Rank-Threshold*, research repository. [Commit b73e3b5eab18a11ddfe5e992b45412c9567a61af](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/tree/b73e3b5eab18a11ddfe5e992b45412c9567a61af).
+GoGoKo699, *Quantum-Readout-Rank-Threshold*, research repository. [Commit 61289b55a495d72f2ae15458e2f33682cb197ce9](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/tree/61289b55a495d72f2ae15458e2f33682cb197ce9).
+
+### BNG00
+
+O. E. Barndorff-Nielsen and R. D. Gill, *Fisher information in quantum statistics*, J. Phys. A: Math. Gen. **33**, 4481–4490 (2000), [DOI](https://doi.org/10.1088/0305-4470/33/24/306). [quant-ph/9808009v4](https://arxiv.org/abs/quant-ph/9808009v4), 23 February 2000; [full text](https://arxiv.org/html/quant-ph/9808009v4), Sections 2–4.
+
+### Mahler13
+
+D. H. Mahler, L. A. Rozema, A. Darabi, C. Ferrie, R. Blume-Kohout, and A. M. Steinberg, *Adaptive quantum state tomography improves accuracy quadratically*, Phys. Rev. Lett. **111**, 183601 (2013), [DOI](https://doi.org/10.1103/PhysRevLett.111.183601). [1303.0436v2](https://arxiv.org/abs/1303.0436v2), 30 October 2013.
+
+### FvG98
+
+C. A. Fuchs and J. van de Graaf, *Cryptographic Distinguishability Measures for Quantum Mechanical States*, [quant-ph/9712042v2](https://arxiv.org/abs/quant-ph/9712042v2), 3 April 1998. [Theorem 1, Eq. (46)](https://arxiv.org/html/quant-ph/9712042v2) relates root fidelity to half trace distance; the geometric calibration obstruction uses its upper inequality and fidelity multiplicativity.
