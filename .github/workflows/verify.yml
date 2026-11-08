@@ -30,14 +30,14 @@ jobs:
 
       - name: Install the browser in temporary storage
         run: |
-          npm install --prefix "$RUNNER_TEMP/readout-browser" playwright@1.56.1
+          npm install --prefix "$RUNNER_TEMP/readout-browser" playwright@1.56.1 mathjax-full@3.2.1
           "$RUNNER_TEMP/readout-browser/node_modules/.bin/playwright" install --with-deps chromium
 
       - name: Capture the exact GitHub pages
         env:
           NODE_PATH: ${{ runner.temp }}/readout-browser/node_modules
         run: |
-          node verification/capture_github.cjs \
+          node verification/capture_hosted_math.cjs \
             --root "$GITHUB_WORKSPACE" \
             --repository "$GITHUB_REPOSITORY" \
             --revision "$(git rev-parse HEAD)" \
