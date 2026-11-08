@@ -2,20 +2,20 @@
 
 An exact eigenbasis makes the calibrated rank-two qutrit readout retain one quarter of the SLD information in every direction. Learning that basis uses specimens and produces a random apparatus. To compare it with a fixed two-copy readout, keep the complete calibration record and count all specimens. Strong and weak eigenvector errors then have different consequences; one calibration mean squared error cannot determine a universal information crossover.
 
-The [general theorem](model.md) and [fixed-state pilot argument](estimation.md#learning-the-calibration-with-a-pilot-sample) remain unchanged. This page studies a shrinking occupied eigenvalue in the smallest moving-support model. [Quantum Readout Rank Threshold](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold) supplies the complementary fixed two-copy apparatus; its [exact continuous-Haar comparison](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/555c543e9928c1206b0aca1c538d1e5b812d964c/science/haar-pair-readout.md) is the authoritative home of the pair calculation.
+The [general theorem](model.md) and [fixed-state pilot argument](estimation.md#learning-the-calibration-with-a-pilot-sample) remain unchanged. This page studies a shrinking occupied eigenvalue in the smallest moving-support model. [Quantum Readout Rank Threshold](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold) supplies the complementary fixed two-copy apparatus; its [exact continuous-Haar comparison](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/main/science/haar-pair-readout.md) is the authoritative home of the pair calculation.
 
 ## Model and complete-record information
 
 Use the basis $`(e_1,e_2,f)`$ and write
 
 ```math
-\rho_b=\operatorname{diag}(a,b,0),\qquad a=1-b,\qquad 0\lt b\lt\tfrac12.
+\rho_b=\mathrm{diag}(a,b,0),\qquad a=1-b,\qquad 0\lt b\lt\tfrac12.
 ```
 
 The full exact-rank-two tangent has seven real coordinates: population redistribution, the real and imaginary occupied coherence, and both quadratures of each occupied-to-empty coherence. In that order its SLD matrix is
 
 ```math
-J=\operatorname{diag}\left(\frac1{ab},4,4,\frac4a,\frac4a,\frac4b,\frac4b\right).
+J=\mathrm{diag}\left(\frac1{ab},4,4,\frac4a,\frac4a,\frac4b,\frac4b\right).
 ```
 
 Every derivative acts on the true state with the realized apparatus fixed. All limits below approach $`b=0`$ through $`b\gt0`$ on this seven-dimensional tangent stratum. The pure-state tangent at the endpoint is a different model.
@@ -59,7 +59,7 @@ Scalar retention does not certify a simultaneous guarantee. Put $`A=b+a c^2`$ an
 ```math
 H_{12,23}=\frac14 D
 \left[\frac{u u^{\mathsf T}}A+\frac{v v^{\mathsf T}}B\right]D,
-\quad D=\operatorname{diag}(1,\sqrt b),\quad
+\quad D=\mathrm{diag}(1,\sqrt b),\quad
 u=\begin{pmatrix}c\\-s\end{pmatrix},\quad
 v=\begin{pmatrix}s\\c\end{pmatrix}.
 ```
@@ -150,7 +150,7 @@ R_s(\widehat\alpha)=\frac b4\frac{1-aD^2/2}{b+a^2D^2/4},\qquad
 I_{{\rm total},\phi\phi}=4b(N-m)\,\mathbb E[R_s(\widehat\alpha)].
 ```
 
-Here $`L\sim\operatorname{Bin}(m,a)`$ and, conditional on $`L`$, $`K_+\sim\operatorname{Bin}(L,1/2)`$. Define $`D_{\ell k}=(2k-\ell)/\ell`$ for $`\ell\gt0`$ and $`D_{00}=0`$. The exact expectation is the finite sum
+Here $`L\sim\mathrm{Bin}(m,a)`$ and, conditional on $`L`$, $`K_+\sim\mathrm{Bin}(L,1/2)`$. Define $`D_{\ell k}=(2k-\ell)/\ell`$ for $`\ell\gt0`$ and $`D_{00}=0`$. The exact expectation is the finite sum
 
 ```math
 \mathbb E R_s
@@ -174,17 +174,17 @@ For comparison only, impose a continuous Gaussian error model $`\delta=Z/\sqrt{4
 ```math
 \mathbb E R_s\simeq\frac14g(q),\qquad
 g(q)=\sqrt{\frac\pi{2q}}\,e^{1/(2q)}
-\operatorname{erfc}\!\left(\frac1{\sqrt{2q}}\right).
+\mathrm{erfc}\!\left(\frac1{\sqrt{2q}}\right).
 ```
 
 The Gaussian integral has $`g(q)\sim\sqrt{\pi/(2q)}`$ for large $`q`$, whereas substituting mean squared error into the reciprocal predicts an order-$`mb`$ fraction. For the discrete pilot, the window $`m^{-2}\ll b\ll m^{-1}`$ resolves the narrow useful-error interval with many lattice points and motivates this continuous approximation; no uniform replacement outside that window is claimed. The finite sum, not this illustrative Gaussian model, is the exact paid-pilot result.
 
 ## Adaptive ceiling and two-copy comparison
 
-The support-rotation budget in [optimality](optimality.md#information-budget-for-support-rotations) gives $`\operatorname{tr}(J_{\mathcal C}^{-1}I_{M,\mathcal C})\le1`$ on the four-dimensional occupied-to-empty tangent subspace $`\mathcal C`$. Apply that bound to every fixed conditional apparatus along a classical adaptive history. The transcript identity then yields
+The support-rotation budget in [optimality](optimality.md#information-budget-for-support-rotations) gives $`\mathrm{tr}(J_{\mathcal C}^{-1}I_{M,\mathcal C})\le1`$ on the four-dimensional occupied-to-empty tangent subspace $`\mathcal C`$. Apply that bound to every fixed conditional apparatus along a classical adaptive history. The transcript identity then yields
 
 ```math
-\operatorname{tr}(J_{\mathcal C}^{-1}I_{{\rm total},\mathcal C})\le N,
+\mathrm{tr}(J_{\mathcal C}^{-1}I_{{\rm total},\mathcal C})\le N,
 \qquad \boxed{c_N^{\rm adaptive\ one\ copy}\le\tfrac14.}
 ```
 
@@ -198,6 +198,6 @@ c_{\rm Haar}(b)\gt\tfrac14\quad
 \qquad c_{\rm Haar}(b)\longrightarrow\tfrac14.
 ```
 
-Both normalize by all consumed copies. Haar covariance makes the pair fraction independent of the true basis. The [authoritative proof](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/555c543e9928c1206b0aca1c538d1e5b812d964c/science/haar-pair-readout.md) uses all four tangent classes, not just the weak scalar response. This gives a strict local full-model information separation from every adaptive one-copy protocol near the boundary without a state-dependent calibration stage. It establishes neither the finite Clifford constant, an explicit threshold, an all-spectrum ordering, an optimal pair constant, nor finite-sample risk dominance.
+Both normalize by all consumed copies. Haar covariance makes the pair fraction independent of the true basis. The [authoritative proof](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/main/science/haar-pair-readout.md) uses all four tangent classes, not just the weak scalar response. This gives a strict local full-model information separation from every adaptive one-copy protocol near the boundary without a state-dependent calibration stage. It establishes neither the finite Clifford constant, an explicit threshold, an all-spectrum ordering, an optimal pair constant, nor finite-sample risk dominance.
 
 Thus a calibration cost, a specified pilot's total-record information, and a coherent-readout advantage are different questions. The exact formulas settle the displayed experiments and geometric task; they do not assume or establish a universal calibration-budget crossover. The [verification guide](../verification/README.md#paid-calibration-checks) reproduces the direct probabilities, full tangent matrices and finite-record identity.

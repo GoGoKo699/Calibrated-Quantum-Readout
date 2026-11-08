@@ -38,7 +38,7 @@ The [paid-calibration account](paid-calibration.md) replaces an uncharged basis-
 
 The account proves a necessary $`mb\to\infty`$ condition for explicitly stated geometric calibration-consistency tasks and evaluates one paid real-angle pilot exactly. Neither statement is a universal total-information crossover. The same conditional information budget bounds the full-model fraction of every adaptive one-copy protocol by $`1/4`$.
 
-[Quantum Readout Rank Threshold](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold) studies the complementary coherent resource. Its [exact Haar pair calculation](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/555c543e9928c1206b0aca1c538d1e5b812d964c/science/haar-pair-readout.md) gives a state-independent readout with a strictly higher full-model minimum fraction for sufficiently small positive $`b`$. Both experiments use ordinary local FI on the rank-two tangent stratum, with every copy counted. This comparison does not identify a finite-sample risk ordering or a sharp finite-design constant.
+[Quantum Readout Rank Threshold](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold) studies the complementary coherent resource. Its [exact Haar pair calculation](https://github.com/GoGoKo699/Quantum-Readout-Rank-Threshold/blob/main/science/haar-pair-readout.md) gives a state-independent readout with a strictly higher full-model minimum fraction for sufficiently small positive $`b`$. Both experiments use ordinary local FI on the rank-two tangent stratum, with every copy counted. This comparison does not identify a finite-sample risk ordering or a sharp finite-design constant.
 
 ## Attribution and verification
 
